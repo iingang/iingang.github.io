@@ -2,8 +2,8 @@
 title: "[Github] Windows 환경에서 Github Blog 만들기"
 author: Ingyung Park
 date: 2020-12-02 22:30:00 +0900
-categories: [Etc,Github]
-tags: [github,blog]
+categories: [ETC, Github]
+tags: [Github, Blog, Jekyll]
 ---
 
 ---
@@ -23,25 +23,90 @@ tags: [github,blog]
 
 ## Jekyll 이란?
 
+`jekyll`은 **정적 웹사이트** 생성기 입니다. 서버에 저장된 html, image, javascript 등의 파일이 그대로 전달된 정적인 웹페이지를 보게 됩니다. 따라서 매우 가볍다는 점이 장점입니다. 
+
 <br/>
 
+Jekyll은 Guthub에서 개발한 툴로, 핵심 역할은 **텍스트 변환 엔진**이라고 볼 수 있습니다.
 
+Markdown 형식의 파일을 HTML 파일로 변환해주는 역할을 하기에, 이 문법에 익숙해지면 누구나 쉽게 이용할 수 있습니다.
+
+Jekyll 을 설치하기 위해 Ruby Installer를 먼저 설치해주셔야 합니다.
+
+
+
+<br/>
 
 ## Install Ruby
 
-<br/>
-
 루비를 설치하시려면 [링크](https://rubyinstaller.org/downloads/)를 클릭해주세요.
 
+<br/>
 
-
-Ruby 설치가 완료되었다면, Ruby Command 창을 실행시켜주세요.
+Ruby Installer 설치가 완료되었다면, Ruby Command 창을 실행시켜주세요.
 
 ![image-20201117193133828](/assets/img/posts/ruby.png){: width="400" class="normal"}
 
 
 
-다음을 설치해주시기 바랍니다.
+<br/>
+
+실행창에서 다음 명령어를 실행해주세요.
+
+- **gem install jekyll**
+- **gem install minima**
+- **gem install bundler**
+- **gem install jekyll-feed**
+- **gem install tzinfo-data**
+
+<br/>
+
+설치 완료 후, 아래 명령어를 실행했을 때 버전이 잘 나오면 성공!
+
+`jekyll -v`
 
 
 
+<br/>
+
+## Jekyll Theme 다운로드
+
+
+
+[Jekyll Theme Page](https://github.com/jekyll/jekyll/wiki/Themes)에 가서 원하는 테마를 골라봅시다.
+
+
+
+<br/>
+
+## Repository 생성
+
+원하는 테마를 골랐으면 대상의 깃허브 페이지에가서 url을 복사해옵니다.
+
+![image-20201117193133828](/assets/img/posts/url.png){: width="400" class="normal"}
+
+
+
+<br/>
+
+가져온 테마로 repository를 만들 차례!
+
+새로운 레파지토리 생성하기를 누르고 아래 보이는 **Import a repository** 링크를 클릭하세요.
+
+![image-20201117193133828](/assets/img/posts/repository.png)
+
+
+
+<br/>
+
+위에서 **복사해온 url**을 첫 번째 clone URL 란에 입력해주고,
+
+내 **Repository Name**에는**` [본인아이디].github.io`**를 입력해줍니다.
+
+![image-20201117193133828](/assets/img/posts/create_repo.png)
+
+<br/>
+
+생성 완료되고, **https://[본인아이디].github.io** 로 접속했을 때 페이지 뜨면 성공!
+
+<br/>
