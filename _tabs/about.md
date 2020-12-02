@@ -10,5 +10,6 @@ order: 4
 # MIT License
 ---
 
+### Ingyung Park
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+>  Email : ingyung.park08@gmail.com
