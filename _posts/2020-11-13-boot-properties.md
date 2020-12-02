@@ -3,7 +3,7 @@ title: "[WebLogic] boot.properties 정리"
 author: Ingyung Park 
 date: 2020-11-14 01:30:00 +0900
 categories: [WAS,WebLogic]
-tags: [WebLogic, boot.properties, 계정]
+tags: [WebLogic]
 ---
 
 ---
@@ -43,7 +43,7 @@ tags: [WebLogic, boot.properties, 계정]
 1. 사용자 계정이 웹로직 엔진에 접근 못하는 경우
 2. ip 주소가 AdminServer와 일치하는지 확인
 3. 기본 스크립트로도 기동 에러가 발생 할 경우, config 디렉토리 경로의 config.lok 파일, configCache 폴더 지우기  
-  
+
   
 
 <br/>
@@ -80,6 +80,8 @@ tags: [WebLogic, boot.properties, 계정]
  
 
 
+
+
 	**`${JAVA_HOME}/bin/java -classpath ${ORACLE_HOME}/wlserver/server/lib/weblogic.jar weblogic.security.utils.AdminAccount [웹로직 콘솔ID] [웹로직 콘솔PWD] .`** 
 	
 	**<mark style="background-color: #fff5b1"> → 맨 뒤에 띄어쓰고 . 꼭 붙일 것!</mark>**  
@@ -92,7 +94,7 @@ tags: [WebLogic, boot.properties, 계정]
 	A. boot.properties 파일은 웹로직 기동 시 Admin User를 확인하는데 사용합니다.
 
 		i. boot.properties 파일 기본 위치 : ${DOMAIN_HOME}/servers/AdminServer/security/boot.properties
-	
+		
 		ii. boot.properties 파일 커스텀 위치 : 
 	웹로직 기동 시 사용하는 스크립트에 "-Dweblogic.system.BootIdentityFile"옵션으로 위치가 지정되어 있습니다.
 	
