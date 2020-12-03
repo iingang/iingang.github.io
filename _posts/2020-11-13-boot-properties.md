@@ -17,6 +17,8 @@ tags: [WebLogic]
 
 # boot.properties 파일 default 위치
 
+---
+
 **WebLogic 버전 기준**
 
 *8.1 이하* : $DOMAIN_HOME/boot.properties
@@ -29,12 +31,15 @@ tags: [WebLogic]
 
 <br/>
 
+<br/>
 
 # 사용자 스크립트 boot.properties 자바 옵션
 
+---
+
 **`-Dweblogic.system.BootIdentityFile=${DOMAIN_HOME}/boot.properties`**  
 
-
+<br/>
 
 <br/>
 
@@ -44,11 +49,13 @@ tags: [WebLogic]
 2. ip 주소가 AdminServer와 일치하는지 확인
 3. 기본 스크립트로도 기동 에러가 발생 할 경우, config 디렉토리 경로의 config.lok 파일, configCache 폴더 지우기  
 
-  
+  <br/>
 
 <br/>
 
 # 계정 초기화 방법
+
+---
 
 
 
@@ -78,6 +85,7 @@ tags: [WebLogic]
 	아래 명령어로 웹로직 계정을 변경해주시기 바랍니다.
 
  
+
 
 
 
