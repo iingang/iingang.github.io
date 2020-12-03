@@ -21,13 +21,31 @@ tags: [WebLogic]
 
 **WebLogic 버전 기준**
 
-*8.1 이하* : $DOMAIN_HOME/boot.properties
+8.1 이하
 
-*9 ~ 10.3.1* : $DOMAIN_HOME/servers/[SERVER_NAME]/security/boot.properties
+```java
+${DOMAIN_HOME}/boot.properties
+```
 
-($DOMAIN_HOME/boot.properties 에 위치시키면 기본 위치로 복사해줌)
+<br/>
 
-*10.3.2 이상* : $DOMAIN_HOME/servers/[SERVER_NAME]/security/boot.properties  
+9 ~ 10.3.1
+
+```java
+${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
+```
+
+→ $DOMAIN_HOME/boot.properties 에 위치시키면 기본 위치로 복사해줌
+
+<br/>
+
+10.3.2 이상
+
+```java
+${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties  
+```
+
+
 
 <br/>
 
@@ -37,7 +55,11 @@ tags: [WebLogic]
 
 ---
 
-**`-Dweblogic.system.BootIdentityFile=${DOMAIN_HOME}/boot.properties`**  
+```java
+-Dweblogic.system.BootIdentityFile=${DOMAIN_HOME}/boot.properties
+```
+
+  
 
 <br/>
 
@@ -90,33 +112,34 @@ tags: [WebLogic]
 
 
 
+```java
+${JAVA_HOME}/bin/java -classpath ${ORACLE_HOME}/wlserver/server/lib/weblogic.jar weblogic.security.utils.AdminAccount [웹로직 콘솔ID] [웹로직 콘솔PWD] .
+```
+
+**<mark style="background-color: #fff5b1"> → 맨 뒤에 띄어쓰고 . 꼭 붙일 것!</mark>**
 
 
 
-	**`${JAVA_HOME}/bin/java -classpath ${ORACLE_HOME}/wlserver/server/lib/weblogic.jar weblogic.security.utils.AdminAccount [웹로직 콘솔ID] [웹로직 콘솔PWD] .`** 
-	
-	**<mark style="background-color: #fff5b1"> → 맨 뒤에 띄어쓰고 . 꼭 붙일 것!</mark>**  
-	
-	<br/>
+<br/>
 
 
 4. **boot.properties 파일 수정**
 
-	A. boot.properties 파일은 웹로직 기동 시 Admin User를 확인하는데 사용합니다.
+  A. boot.properties 파일은 웹로직 기동 시 Admin User를 확인하는데 사용합니다.
 
-		i. boot.properties 파일 기본 위치 : ${DOMAIN_HOME}/servers/AdminServer/security/boot.properties
-		
-		ii. boot.properties 파일 커스텀 위치 : 
-	웹로직 기동 시 사용하는 스크립트에 "-Dweblogic.system.BootIdentityFile"옵션으로 위치가 지정되어 있습니다.
-	
-	B. 기본 위치 혹은 커스텀 위치에 있는 boot.properties 파일의 내용을 모두 지우고, 위에서 확인 및 변경한 username, password를 입력합니다.  
+  	i. boot.properties 파일 기본 위치 : ${DOMAIN_HOME}/servers/AdminServer/security/boot.properties
+  	
+  	ii. boot.properties 파일 커스텀 위치 : 
+  웹로직 기동 시 사용하는 스크립트에 "-Dweblogic.system.BootIdentityFile"옵션으로 위치가 지정되어 있습니다.
+
+  B. 기본 위치 혹은 커스텀 위치에 있는 boot.properties 파일의 내용을 모두 지우고, 위에서 확인 및 변경한 username, password를 입력합니다.  
 
 
 <br/>
 
 - **<mark style='background-color: #dcffe4'>boot.properties 파일 생성</mark>**
 
-```
+```java
 username=웹로직 콘솔ID
 password=웹로직 콘솔PWD
 ```
