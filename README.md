@@ -1,3 +1,4 @@
-## iingang :)
+## Ingyung Blog😚
 
-ingyung's study diary
+IT, Programming Study :)
+
