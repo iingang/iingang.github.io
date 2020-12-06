@@ -15,7 +15,7 @@ tags: [WebLogic]
 {:toc}
 ---
 
-# boot.properties 파일 default 위치
+# **boot.properties 파일 default 위치**
 
 ---
 
@@ -51,7 +51,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 <br/>
 
-# 사용자 스크립트 boot.properties 자바 옵션
+# **사용자 스크립트 boot.properties 자바 옵션**
 
 ---
 
@@ -65,7 +65,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 <br/>
 
-# 계정 관련 오류 날 때 확인해 볼 사항
+# **계정 관련 오류 날 때 확인해 볼 사항**
 
 ---
 
@@ -77,7 +77,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 <br/>
 
-# 계정 초기화 방법
+# **계정 초기화 방법**
 
 ---
 
@@ -109,6 +109,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 	아래 명령어로 웹로직 계정을 변경해주시기 바랍니다.
 
  
+
 
 
 
