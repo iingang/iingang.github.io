@@ -265,7 +265,7 @@ git add .
 **추가한 코드에 대한 설명 작성**
 
 ```ruby
-git commit -m "edit config"
+git commit -m "modify config file"
 ```
 
 <br/>
