@@ -75,7 +75,7 @@ tags: [IT, DB, DataBase]
 
 
 
-## **Key**
+## **키 (Key)**
 
 ----
 
