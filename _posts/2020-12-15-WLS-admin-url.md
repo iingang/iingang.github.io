@@ -1,0 +1,93 @@
+---
+title: "[WebLogic] 웹로직 콘솔 특정 ip 접속 제한 방법"
+author: Ingyung Park
+date: 2020-12-15 23:50:00 +0900
+categories: [WAS,WebLogic]
+tags: [WebLogic,WAS,application]
+---
+
+---
+**Contents**
+
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+---
+
+<br/>
+
+# **WebLogic Admin Console 특정 ip만 허용/거부 방법**
+
+---
+
+웹로직 콘솔 접속을 하신 뒤, **[도메인명] > [보안(Security)] > [필터(Filter)]** 로 들어가주세요.
+
+<br />
+
+변경하실 내용은 다음과 같습니다.
+
+<br />
+
+### **1. 접속 필터 입력**
+
+접속 필터 란에 아래 내용을 작성해주세요.
+
+**weblogic.security.net.ConnectionFilterImpl**
+
+ <br />
+
+### **2. 접속 필터 규칙 입력**
+
+룰은 보통 아래와 같은 포맷으로 설정합니다.
+
+**`TargetAddress` `LocalAddress` `LocalPort` `Action` `Protocols`**
+
+
+
+
+
+ <br />
+
+
+
+**[규칙 설명]**
+
+**`TargetAddress`** : 한 개 이상의 대상 ip를 뜻한다.
+
+**`LocalAddress`** : WebLogic 인스턴스가 기동되어 있는 호스트 정보이다. 
+
+> \* 표시는 모든 로컬 주소를 의미함
+
+**`LocalPort`** : WebLogic 인스턴스가 Listening 하고 있는 로컬 포트를 뜻한다. 
+
+> (WebLogic Admin Console에 대한 설정이면 AdminServer 포트 입력)
+
+**`Action`** : allow 또는 deny 의 액션을 나타낸다.
+
+**`Protocols`** : http, https, t3, t3s 등 프로토콜을 의미한다. 
+
+> 설정하지 않으면 모든 프로토콜에 해당됨
+
+  <br />
+
+**아래 예시는 193.1.x.x 대역 IP를 가진 클라이언트에서만 7001 포트 접근을 허용하는 설정입니다.**
+
+```bash
+193.1.0.0/16 193.1.1.1 7001 allow
+```
+
+  <br />
+
+
+
+ 참고 문서를 보시려면 [링크](https://docs.oracle.com/middleware/12212/wls/SCPRG/con_filtr.htm#SCPRG388)를 클릭해주세요.
+
+ <br />
+
+위의 설정이 모두 완료되셨으면, 저장을 누르시고 변경 내용 및 활성화 버튼을 눌러주시면 됩니다.
+
+
+
+<br/>
+
