@@ -39,9 +39,13 @@ tags: [WebLogic,WAS,application]
 
 ### **2. 접속 필터 규칙 입력**
 
-룰은 보통 아래와 같은 포맷으로 설정합니다.
+필터 규칙은 보통 아래와 같은 포맷으로 작성합니다.
 
-**`TargetAddress` `LocalAddress` `LocalPort` `Action` `Protocols`**
+
+
+```bash
+['TargetAddress'] ['LocalAddress'] ['LocalPort'] ['Action'] ['Protocols']
+```
 
 
 
