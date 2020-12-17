@@ -17,7 +17,7 @@ tags: [WebLogic,WAS,application]
 
 <br/>
 
-# **WebLogic Admin Console 특정 ip만 허용/거부 방법**
+# **WebLogic Admin Console 특정 ip만 허용/차단 방법**
 
 ---
 
@@ -57,25 +57,37 @@ tags: [WebLogic,WAS,application]
 
 #### **[규칙 설명]**
 
-**`TargetAddress`** : 한 개 이상의 대상 시스템 (ip 또는 호스트명)
+---
 
-**`LocalAddress`** : WebLogic 인스턴스가 기동중인 호스트 정보
+
+
+**`TargetAddress`** : **한 개 이상의 대상 시스템 (ip 또는 호스트명)**
+
+**`LocalAddress`** : **WebLogic 인스턴스가 기동중인 호스트 정보**
 
 > \* 표시는 모든 로컬 주소를 의미함
 
-**`LocalPort`** : WebLogic 인스턴스가 Listening 하고 있는 로컬 포트 
+**`LocalPort`** : **WebLogic 인스턴스가 Listening 하고 있는 로컬 포트**
 
 > (WebLogic Admin Console에 대한 설정이면 AdminServer 포트 입력)
 
-**`Action`** : allow 또는 deny
+**`Action`** : **allow 또는 deny**
 
-**`Protocols`** : http, https, t3, t3s 등 프로토콜 
+**`Protocols`** : **http, https, t3, t3s 등 프로토콜**
 
 > 설정하지 않으면 모든 프로토콜에 해당됨
 
   <br />
 
-**ex 1) 192.168.1.0 ~ 192.168.1.255 범위의 ip에서만 7001 포트 접근을 허용하는 설정**
+
+
+#### **[예시]**
+
+---
+
+
+
+ex 1) 192.168.1.0 ~ 192.168.1.255 범위의 ip에서만 7001 포트 접근을 허용하는 설정
 
 ```bash
 192.168.1.0/255.255.255.0 * 7001 allow
@@ -83,7 +95,7 @@ tags: [WebLogic,WAS,application]
 
   <br />
 
-**ex 2) 192.168.x.x 대역을 가진 ip에서만 8002 포트 접근을 차단하는 설정**
+ex 2) 192.168.x.x 대역을 가진 ip에서만 8002 포트 접근을 차단하는 설정
 
 ```bash
 192.168.1.0/16 * 8002 deny
@@ -93,7 +105,7 @@ tags: [WebLogic,WAS,application]
 
   <br />
 
-**ex 3) 모든 ip에 대해 7001 포트로 Listen 하는 http, https 프로토콜에 대해 접근을 차단하는 설정 (`t3`, `t3s` 가능)**
+ex 3) 모든 ip에 대해 7001 포트로 Listen 하는 http, https 프로토콜에 대해 접근을 차단하는 설정 (`t3`, `t3s` 가능)
 
 ```bash
 * * 7001 deny http https
