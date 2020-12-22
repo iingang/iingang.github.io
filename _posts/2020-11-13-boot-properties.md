@@ -23,7 +23,7 @@ tags: [WebLogic]
 
 8.1 이하
 
-```java
+```shell
 ${DOMAIN_HOME}/boot.properties
 ```
 
@@ -31,7 +31,7 @@ ${DOMAIN_HOME}/boot.properties
 
 9 ~ 10.3.1
 
-```java
+```sh
 ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 ```
 
@@ -41,7 +41,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 10.3.2 이상
 
-```java
+```sh
 ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties  
 ```
 
@@ -55,7 +55,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 ---
 
-```java
+```sh
 -Dweblogic.system.BootIdentityFile=${DOMAIN_HOME}/boot.properties
 ```
 
@@ -113,7 +113,8 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 
 
-```java
+
+```sh
 ${JAVA_HOME}/bin/java -classpath ${ORACLE_HOME}/wlserver/server/lib/weblogic.jar weblogic.security.utils.AdminAccount [웹로직 콘솔ID] [웹로직 콘솔PWD] .
 ```
 
@@ -140,7 +141,7 @@ ${JAVA_HOME}/bin/java -classpath ${ORACLE_HOME}/wlserver/server/lib/weblogic.jar
 
 - **<mark style='background-color: #dcffe4'>boot.properties 파일 생성</mark>**
 
-```java
+```sh
 username=웹로직 콘솔ID
 password=웹로직 콘솔PWD
 ```
