@@ -1,5 +1,5 @@
 ---
-title: "[WebLogic] 웹로직 UDDI explorer 해제 방법"
+title: "[WebLogic] 웹로직 UDDI Explorer 비활성화 방법"
 author: Ingyung Park
 date: 2020-12-22 21:50:00 +0900
 categories: [WAS,WebLogic]
@@ -17,9 +17,21 @@ tags: [WebLogic,WAS]
 
 <br/>
 
-# **WebLogic UDDI explorer disable 방법**
+# **WebLogic UDDI Explorer disable 방법**
 
 ---
+
+<br/>
+
+UDDI가 활성화 되어있는 경우,
+
+http://ip:port/uddiexplorer 를 호출하면 WebLogic UDDI Explorer 페이지를 볼 수 있습니다.
+
+<br/>
+
+배포된 어플리케이션이 해당 기능을 사용하지 않는다면, 보안의 이유로 비활성화 하는 것을 권장합니다.
+
+
 
 <br/>
 
