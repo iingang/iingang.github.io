@@ -97,7 +97,7 @@ cd ${MW_HOME}
 
 <br/>
 
-### **4. WebLogic Admin Console 확인**
+## **4. WebLogic Admin Console 확인**
 
 ---
 
