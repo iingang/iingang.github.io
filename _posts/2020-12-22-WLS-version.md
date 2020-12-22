@@ -23,14 +23,14 @@ tags: [WebLogic,WAS,version]
 
 <br/>
 
-### **1. 명령어로 확인**
+## **1. 명령어로 확인**
 
 ---
 
-**환경변수 세팅**
+**1.1 환경변수 세팅**
 
 ```sh
-cd $DOMAIN_HOME/bin
+cd ${DOMAIN_HOME}/bin
 ```
 
 ```sh
@@ -39,7 +39,7 @@ cd $DOMAIN_HOME/bin
 
 <br/>
 
-**버전 확인**
+**1.2 버전 확인**
 
 ```sh
 java weblogic.version
@@ -53,15 +53,23 @@ java weblogic.version
 
 <br/>
 
-### **2. config.xml 파일 확인**
+## **2. config.xml 파일 확인**
 
 ---
 
 > WebLogic 구버전은 예외
 
+<br/>
+
+**2.1 경로 이동**
+
 ```sh
-cd $DOMAIN_HOME/config
+cd ${DOMAIN_HOME}/config
 ```
+
+<br/>
+
+**2.2 버전 확인**
 
 **config.xml** 파일 상단의 **`<domain-version>`** 태그에서 확인 가능합니다.
 
@@ -69,13 +77,19 @@ cd $DOMAIN_HOME/config
 
 <br/>
 
-### **3. registry.xml 파일 확인**
+## **3. registry.xml 파일 확인**
 
 ---
 
+**3.1 경로 이동**
+
 ```sh
-cd $MW_HOME
+cd ${MW_HOME}
 ```
+
+<br/>
+
+**3.2 버전 확인**
 
 **registry.xml** 파일에서 **`version`**으로 검색하면 확인 가능합니다.
 
