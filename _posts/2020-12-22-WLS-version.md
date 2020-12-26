@@ -17,7 +17,7 @@ tags: [WebLogic,WAS,version]
 
 <br/>
 
-# **WebLogic 버전 확인**
+# **WebLogic Version 확인**
 
 ---
 
