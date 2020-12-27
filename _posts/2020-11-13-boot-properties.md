@@ -19,9 +19,11 @@ tags: [WebLogic]
 
 ---
 
-**WebLogic 버전 기준**
+### **WebLogic Version 기준**
 
-8.1 이하
+<br/>
+
+#### **8.1 이하**
 
 ```shell
 ${DOMAIN_HOME}/boot.properties
@@ -29,7 +31,7 @@ ${DOMAIN_HOME}/boot.properties
 
 <br/>
 
-9 ~ 10.3.1
+#### **9 ~ 10.3.1**
 
 ```sh
 ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
@@ -39,7 +41,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 <br/>
 
-10.3.2 이상
+#### **10.3.2 이상**
 
 ```sh
 ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties  
@@ -69,9 +71,10 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 ---
 
-1. 사용자 계정이 웹로직 엔진에 접근 못하는 경우
+1. 사용자 계정이 웹로직 엔진에 접근 못하는지 확인
 2. ip 주소가 AdminServer와 일치하는지 확인
-3. 기본 스크립트로도 기동 에러가 발생 할 경우, config 디렉토리 경로의 config.lok 파일, configCache 폴더 지우기  
+3. 기본 스크립트로 기동 되는지 확인
+   - 안 될 경우, config 디렉토리 경로의 config.lok 파일, configCache 폴더 지우고 다시 기동
 
   <br/>
 
@@ -81,42 +84,80 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 ---
 
+위의 내용을 확인하였을 때 이상이 없다면 계정 아이디 및 비밀번호를 변경해줍니다.
 
+방법은 아래와 같습니다.
 
-1. **웹로직 서버 중지**
+<br/>
 
-	모든 서버를 중지합니다. 
-	
-	<br/>
-	
-	
+## **1. 웹로직 서버 중지**
 
-2. **servers 디렉토리 백업**
-
-	$DOMAIN_HOME/servers 디렉토리를 **servers_bak** 으로 파일명을 변경해주시기 바랍니다.  
-	
-	<br/>
-
-
-3. **웹로직 계정 변경**
-
-	$DOMAIN_HOME/security 경로의 DefaultAuthenticatorInit.ldift 파일을 **DefaultAuthenticatorInit.ldift_bak** 으로 변경해주시기 바랍니다.
-
- 
-
-	변경 후, 해당 경로에서 관리자 권한으로 cmd 창을 열어주시기 바랍니다. (윈도우 일 때)
-	
-	아래 명령어로 웹로직 계정을 변경해주시기 바랍니다.
-
- 
+---
 
 
 
+모든 서버를 중지합니다. 
+
+<br/>
+
+
+
+## **2. servers 디렉토리 백업**
+
+---
+
+
+
+**경로 이동**
+
+```shell
+cd $DOMAIN_HOME/servers 
+```
+
+<br/>
+
+**파일 백업**
+
+```shell
+mv servers servers_bak
+```
+
+
+
+<br/>
+
+## **3. 웹로직 계정 변경**
+
+---
+
+
+
+**경로 이동**
+
+```shell
+cd $DOMAIN_HOME/security
+```
+
+<br/>
+
+**파일 백업**
+
+```shell
+mv DefaultAuthenticatorInit.ldift DefaultAuthenticatorInit.ldift_bak
+```
+
+
+
+<br/>
+
+**계정 변경**
 
 
 ```sh
 ${JAVA_HOME}/bin/java -classpath ${ORACLE_HOME}/wlserver/server/lib/weblogic.jar weblogic.security.utils.AdminAccount [웹로직 콘솔ID] [웹로직 콘솔PWD] .
 ```
+
+> 윈도우의 경우, 관리자 권한으로 cmd 창을 열고 명령어를 입력해주셔야 합니다.
 
 **<mark style="background-color: #fff5b1"> → 맨 뒤에 띄어쓰고 . 꼭 붙일 것!</mark>**
 
@@ -124,27 +165,40 @@ ${JAVA_HOME}/bin/java -classpath ${ORACLE_HOME}/wlserver/server/lib/weblogic.jar
 
 <br/>
 
+## **4. boot.properties 파일 수정**
 
-4. **boot.properties 파일 수정**
+---
 
-  A. boot.properties 파일은 웹로직 기동 시 Admin User를 확인하는데 사용합니다.
 
-  	i. boot.properties 파일 기본 위치 : ${DOMAIN_HOME}/servers/AdminServer/security/boot.properties
-  	
-  	ii. boot.properties 파일 커스텀 위치 : 
-  웹로직 기동 시 사용하는 스크립트에 "-Dweblogic.system.BootIdentityFile"옵션으로 위치가 지정되어 있습니다.
 
-  B. 기본 위치 혹은 커스텀 위치에 있는 boot.properties 파일의 내용을 모두 지우고, 위에서 확인 및 변경한 username, password를 입력합니다.  
+boot.properties 파일은 웹로직 기동 시 Admin User를 확인하는데 사용합니다.
 
+기본 위치는 아래와같습니다.
+
+```shell
+${DOMAIN_HOME}/servers/AdminServer/security/boot.properties
+```
 
 <br/>
 
-- **<mark style='background-color: #dcffe4'>boot.properties 파일 생성</mark>**
+만약 옵션으로 지정하여 사용하고 있다면, 웹로직 기동 스크립트에 **-Dweblogic.system.BootIdentityFile** 옵션으로 파일 위치를 확인하시면 됩니다.
+
+<br/>
+
+
+
+계정을 변경하였기 때문에 기존 boot.properties 파일의 내용을 모두 지우고, 위에서 변경한 **`username`**, **`password`**를 입력합니다.  
+
+<br/>
+
+### **boot.properties 파일 생성**
 
 ```sh
 username=웹로직 콘솔ID
 password=웹로직 콘솔PWD
 ```
 
- 
+ <br/>
+
+세팅이 완료되었으면 웹로직 서버를 기동해주시면 됩니다.
 
