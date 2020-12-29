@@ -17,7 +17,7 @@ tags: [IT, DB, DataBase]
 
 <br/>
 
-# **트랜잭션 (Transaction) 이란?**
+# **트랜잭션(Transaction)이란?**
 
 ---
 

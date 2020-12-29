@@ -72,9 +72,16 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 ---
 
 1. 사용자 계정이 웹로직 엔진에 접근 못하는지 확인
+
 2. ip 주소가 AdminServer와 일치하는지 확인
-3. 기본 스크립트로 기동 되는지 확인
-   - 안 될 경우, config 디렉토리 경로의 config.lok 파일, configCache 폴더 지우고 다시 기동
+
+3. 기본 스크립트로 기동 되는지 확인 
+   
+   ```shell
+   ${DOMAIN_HOME}/bin/startWebLogic.sh
+   ```
+   
+   - 기동 안 될 경우, config 디렉토리 경로의 config.lok 파일, configCache 폴더 지우고 다시 기동해보기
 
   <br/>
 
@@ -84,7 +91,7 @@ ${DOMAIN_HOME}/servers/${SERVER_NAME}/security/boot.properties
 
 ---
 
-위의 내용을 확인하였을 때 이상이 없다면 계정 아이디 및 비밀번호를 변경해줍니다.
+위의 내용을 확인하였는데, 이상이 없는데도 계정 오류가 발생한다면 계정 초기화를 해줍니다.
 
 방법은 아래와 같습니다.
 
