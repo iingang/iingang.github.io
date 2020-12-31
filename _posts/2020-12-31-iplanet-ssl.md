@@ -1,5 +1,5 @@
 ---
-title: "[iplanet] iPlanet SSL 인증서 등록 방법"
+title: "[iPlanet] iPlanet SSL 인증서 등록 방법"
 author: Ingyung Park
 date: 2020-12-31 00:30:00 +0900
 categories: [WEB,iPlanet]
@@ -23,7 +23,7 @@ tags: [iplanet,Web]
 
 <br/>
 
-## 1. **key3.db(개인키), cert8.db 파일 생성**
+## 1. **key3.db(개인키), cert8.db 파일 등록**
 
 ---
 
