@@ -153,7 +153,7 @@ OS는 Windows 를 선택하여 가장 최신버전을 받아주세요.
 
 
 
-다운이 완료되면, Git Bash 를 실행시켜 주세요.
+다운로드가 완료되면, Git Bash 를 실행시켜 주세요.
 
 ![image-20201203175217349](/assets/img/posts/git_bash.png)
 
@@ -188,9 +188,9 @@ git config --global user.email "깃허브이메일"
 >
 > ex) cd F:
 
+<br/>
 
-
- 다음 명령어를 실행해주세요. 
+ 해당 위치에서 다음 명령어를 실행해주세요. 
 
 ```ruby
 git clone [복사해온 URL] -b master --single-branch
@@ -202,7 +202,7 @@ git clone [복사해온 URL] -b master --single-branch
 
 
 
-블로그 디렉토리를 가져왔으면 성공!
+블로그 디렉토리를 잘 가져왔으면 성공!
 
 <br/>
 
@@ -246,11 +246,58 @@ bundle exec jekyll s
 
 <br/>
 
+
+
+
+
+만약 tzinfo 관련하여 아래와 같은 에러가 발생한다면, Gemfile 파일 수정이 필요합니다.
+
+```shell
+Dependency Error: Yikes! It looks like you don't have tzinfo or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- tzinfo' If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
+```
+
+<br/>
+
+vi 편집기 모드로 Gemfile 파일을 열어줍니다.
+
+```shell
+vi Gemfile
+```
+
+<br/>
+
+아래 내용을 추가하여 주세요.
+
+```shell
+gem "tzinfo"
+gem "tzinfo-data"
+```
+
+
+
+
+
+<br/>
+
+다시  아래 명령어를 입력해줍니다.
+
+```shell
+bundle exec jekyll s
+```
+
+
+
 ![image-20210104164806811](/assets/img/posts/bundle.png)
 
+<br/>
 
+위와 같이 잘 실행이 되었다면, [http://127.0.0.1:4000](http://127.0.0.1:4000) 로 접속해주세요.
 
-위와 같이 에러 없이 잘 실행이 되었다면, [http://127.0.0.1:4000](http://127.0.0.1:4000) 로 접속할 수 있습니다.
+<br/>
+
+![image-20210104175651055](/assets/img/posts/blog.png)
+
+<br/>
 
 접속해서 블로그에 반영한 내용을 커밋 전에 미리 확인할 수 있습니다.
 
