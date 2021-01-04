@@ -229,6 +229,8 @@ cd [본인아이디].github.io
 해당 경로에서 아래 명령어를 순차적으로 실행해주세요.
 
 ```ruby
+gem install tzinfo
+gem install tzinfo-data
 bundle install
 bundle update
 bundle install
