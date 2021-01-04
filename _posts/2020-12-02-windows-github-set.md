@@ -25,7 +25,7 @@ tags: [Github, Blog, Jekyll]
 
 <br/>
 
-Jekyll은 Guthub에서 개발한 툴로, 핵심 역할은 **텍스트 변환 엔진**이라고 볼 수 있습니다.
+Jekyll은 Github에서 개발한 툴로, 핵심 역할은 **텍스트 변환 엔진**이라고 볼 수 있습니다.
 
 Markdown 형식의 파일을 HTML 파일로 변환해주는 역할을 하기에, 이 문법에 익숙해지면 누구나 쉽게 이용할 수 있습니다.
 
@@ -85,7 +85,7 @@ jekyll -v
 
 
 
-[Jekyll Theme Page](https://github.com/jekyll/jekyll/wiki/Themes)에 가서 원하는 테마를 골라봅시다.
+[Jekyll Theme Page](http://jekyllthemes.org)에 가서 원하는 테마를 골라봅시다.
 
 
 
@@ -99,11 +99,11 @@ jekyll -v
 
 
 
-원하는 테마를 골랐으면 대상의 깃허브 페이지에가서 url을 복사해옵니다.
+원하는 테마를 골랐으면 대상의 깃허브 페이지에가서 아래 url을 복사해옵니다.
 
 ![image-20201117193133828](/assets/img/posts/url.png){: width="400" class="normal"}
 
-
+<br/>
 
 <br/>
 
@@ -113,19 +113,21 @@ jekyll -v
 
 ![image-20201117193133828](/assets/img/posts/repository.png)
 
-
+<br/>
 
 <br/>
 
-위에서 **복사해온 url**을 첫 번째 clone URL 란에 입력해주고,
+위에서 **복사해온 url**을 첫 번째 **clone URL** 란에 입력해주고,
 
 내 **Repository Name**에는**` [본인아이디].github.io`**를 입력해줍니다.
 
 ![image-20201117193133828](/assets/img/posts/create_repo.png)
 
+
+
 <br/>
 
-생성 완료되고, **https://[본인아이디].github.io** 로 접속했을 때 페이지 뜨면 성공!
+생성이 완료되었으면, **https://[본인아이디].github.io** 로 접속했을 때 페이지 뜨면 성공!
 
 <br/>
 
@@ -137,7 +139,7 @@ jekyll -v
 
 [Git 다운로드 링크](https://git-scm.com/download/win)에 가서 파일 다운로드 받습니다.
 
-OS는 Windows 를 선택하여 받아주세요.
+OS는 Windows 를 선택하여 가장 최신버전을 받아주세요.
 
 <br/>
 
@@ -216,6 +218,14 @@ git clone [복사해온 URL] -b master --single-branch
 
 로컬에 가져와진 repository 경로로 가봅시다.
 
+```shell
+cd [본인아이디].github.io
+```
+
+
+
+<br/>
+
 해당 경로에서 아래 명령어를 순차적으로 실행해주세요.
 
 ```ruby
@@ -234,9 +244,13 @@ bundle exec jekyll s
 
 <br/>
 
-에러 없이 잘 실행이 되었다면, [http://127.0.0.1:4000](http://127.0.0.1:4000) 로 접속할 수 있습니다.
+![image-20210104164806811](/assets/img/posts/bundle.png)
 
-블로그에 반영한 내용을 커밋 전에 확인할 수 있습니다.
+
+
+위와 같이 에러 없이 잘 실행이 되었다면, [http://127.0.0.1:4000](http://127.0.0.1:4000) 로 접속할 수 있습니다.
+
+접속해서 블로그에 반영한 내용을 커밋 전에 미리 확인할 수 있습니다.
 
 <br/>
 
