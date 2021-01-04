@@ -186,7 +186,7 @@ git config --global user.email "깃허브이메일"
 
 > F 드라이브 밑에 만드려면 해당 디렉토리로 가서 진행! 
 >
-> ex) cd F:
+> ex) cd F
 
 <br/>
 
