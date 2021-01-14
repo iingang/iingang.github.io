@@ -28,7 +28,7 @@ tags: [iplanet,Web]
 로그를 보니 다음과 같은 에러 발생
 
 ```shell
-HTTP2020: cannot find template j2ee
+process-uri-objects reports: HTTP2020: cannot find template j2ee
 ```
 
 
