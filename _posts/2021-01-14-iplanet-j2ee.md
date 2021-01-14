@@ -43,9 +43,9 @@ process-uri-objects reports: HTTP2020: cannot find template j2ee
 
 
 
-mime type 설정이 제대로 동작하려면 iPlanet에서 JAVA를 비활성화 해야합니다.
+mime type 설정이 제대로 동작하려면 iPlanet에서 JAVA를 비활성화해야 함
 
-그렇지 않으면 iPlanet 이  `*.jsp`로 끝나는 모든 요청을 처리하려고 시도하고 DocRoot 하위에서 리소스를 찾지 못하므로 404 오류를 반환합니다.
+그렇지 않으면 iPlanet 이  `*.jsp`로 끝나는 모든 요청을 처리하려고 시도하고 DocRoot 하위에서 리소스를 찾지 못하므로 404 오류를 반환
 
 <br/>
 
@@ -55,7 +55,7 @@ mime type 설정이 제대로 동작하려면 iPlanet에서 JAVA를 비활성화
 
 ---
 
-**[인스턴스명]-obj.conf** 파일을 보면 기본적으로 j2ee 사용 활성화가 되어있는데, 이 부분을 주석처리 혹은 삭제해주시면 됩니다.
+**[인스턴스명]-obj.conf** 파일을 보면 기본적으로 j2ee 사용 활성화가 되어있는데, 이 부분을 주석처리 혹은 삭제하면 됨
 
 <br/>
 
@@ -72,9 +72,7 @@ Service fn="service-j2ee"
 
 <br/>
 
-위 설정을 설정을 마치고 웹서버 재기동을 하면 적용됩니다.
-
-
+위 설정을 마치고 웹서버 재기동을 하면 적용 완료!
 
 
 
