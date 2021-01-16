@@ -1,5 +1,5 @@
 ---
-title: "[iPlanet] ERROR HTTP2020: cannot find template j2ee"
+title: "[iPlanet] HTTP2020: cannot find template j2ee"
 author: Ingyung Park
 date: 2021-01-14 23:00:00 +0900
 categories: [WEB,iPlanet]
