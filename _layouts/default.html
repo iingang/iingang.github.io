@@ -24,7 +24,7 @@ layout: compress
 <html lang="{{ lang }}" {{ prefer_mode }} >
 
   {% include head.html %}
-
+  {% include ad.html %}
   <body data-spy="scroll" data-target="#toc">
 
     <div id="sidebar" class="d-flex flex-column">
@@ -37,7 +37,6 @@ layout: compress
       <div id="main">
 
         {% include refactor-content.html content=content %}
-	{% include ad.html %}
         {% include footer.html %}
 
       </div>
