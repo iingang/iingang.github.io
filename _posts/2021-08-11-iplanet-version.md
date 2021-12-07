@@ -94,3 +94,6 @@ ${SERVER_HOME}/config 디렉토리에 있는 magnus.conf 파일에 다음 내용
 ---
 
 Oracle iPlanet Web Server 7.0 에서, 서버 및 버전 Header 정보를 변경하는 방법 (Doc ID 1539530.1)
+
+How to Change the Server and Version Header in Oracle iPlanet Web Server 6.1 ? (Doc ID 1505684.1)
+
