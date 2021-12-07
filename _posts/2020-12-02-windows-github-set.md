@@ -2,7 +2,7 @@
 title: "[Github 깃허브] Windows 환경에서 Github Blog 생성하기"
 author: Ingyung Park
 date: 2020-12-02 22:30:00 +0900
-categories: [ETC, Github]
+categories: [Git Blog]
 tags: [Github, Blog, Jekyll]
 ---
 
