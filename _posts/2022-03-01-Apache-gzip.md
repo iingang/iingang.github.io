@@ -3,7 +3,7 @@ title: "[Apache] Apache gzip을 이용한 압축 전송 사용"
 author: Ingyung Park
 date: 2022-03-01 18:00:00 +0900
 categories: [WEB,Apache]
-tags: [WEB,Apache]
+tags: [Web,Apache]
 typora-root-url: ./
 ---
 
