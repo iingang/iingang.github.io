@@ -52,7 +52,7 @@ SHA digest:     F8:B0:FB:39:5D:7E:11:80:9E:C2:05:56:2C:F9:75:5D:66:61:7D:2E
 
 
 
-### **User 인증서 삭제 명령어**
+### **User Certificates 삭제 명령어**
 
 ----
 
@@ -100,7 +100,7 @@ SHA digest:     F8:B0:FB:39:5D:7E:11:80:9E:C2:05:56:2C:F9:75:5D:66:61:7D:2E
 
 <br/><br/>
 
-### **Trust 인증서 삭제 명령어**
+### **Trust Certificates 삭제 명령어**
 
 ----
 
@@ -144,10 +144,58 @@ Trusted Certificates:
 
 <br/>
 
+### **Requested Certificates 삭제 명령어**
+
+----
+
+
+
+위의 내용을 다 지우면 Requested Certificates에 정보가 남아 아래 명령어로 지워줬다.
+
+```
+[weblogic@test bin]$ ./orapki wallet remove -wallet ${WALLET_HOME} \
+> -dn "CN=test.com,OU=Technical Support Div.,O=TEST,L=Seocho,ST=Seoul,C=KR" \
+> -cert_req \
+> -auto_login_only
+Oracle PKI Tool : Version 12.2.1.3.0
+Copyright (c) 2004, 2017, Oracle and/or its affiliates. All rights reserved.
+
+Operation is successfully completed.
+```
+
+
+
+<br/>
+
+
+
+Trusted Certificates 내용도 잘 제거된 것을 볼 수 있다.
+
+```
+[weblogic@test bin]$ ./orapki wallet display -wallet ${WALLET_HOME} -complete                             
+Oracle PKI Tool : Version 12.2.1.3.0
+Copyright (c) 2004, 2017, Oracle and/or its affiliates. All rights reserved.
+
+Requested Certificates:
+Subject:        CN=test.com,OU=Technical Support Div.,O=TEST,L=Seocho,ST=Seoul,C=KR
+Key Length:     2048
+
+User Certificates:
+Trusted Certificates:
+```
+
+
+
+<br/>
+
+<br/>
+
 ## **Reference**
 
 ---
 
 How to Remove the Requested Certificates Using ORAPKI command from the Oracle Wallet? (Doc ID 2766262.1)
+
+How to Remove All Trusted and User Certificates from Wallet? (Doc ID 2780286.1)
 
 <br/>
