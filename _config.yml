@@ -9,10 +9,10 @@
 #--------------------------
 title: Ingyung Blog                          # the main title
 
-tagline: IT Diary :)  # it will display as the sub-title
+tagline: IT 이야기  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  IT, Programming Study
+  WAS, WEB, Programming, OpenSource, Kafka ..
 
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
 url: 'https://iingang.github.io'
