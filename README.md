@@ -1,4 +1,4 @@
-## Ingyung Blog😚
+## Ingyung's IT Blog
 
-IT, Programming Study :)
+
 
