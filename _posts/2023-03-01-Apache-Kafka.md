@@ -24,9 +24,7 @@ typora-root-url: ./
 
 **아파치 카프카(Apache Kafka)**는 실시간 데이터 스트리밍 플랫폼으로, 대용량의 데이터를 안정적이고 확장 가능한 방식으로 처리할 수 있도록 도와주는 **`오픈소스 분산 메세징 시스템`**이다.
 
-
-
-![Kafka](/assets/img/posts/2023-03-01-Apache-Kafka/Kafka.png)
+![Kafka](/../assets/img/posts/2023-03-01-Apache-Kafka/Kafka.png)
 
 <br/>
 
