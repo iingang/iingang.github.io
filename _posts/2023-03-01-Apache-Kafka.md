@@ -7,14 +7,6 @@ tags: [Kafka, Message queue, Messaging System]
 typora-root-url: ./
 ---
 
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
 
 <br/>
 
