@@ -85,7 +85,7 @@ jekyll -v
 
 
 
-[Jekyll Theme Page](http://jekyllthemes.org)에 가서 원하는 테마를 골라봅시다.
+[Jekyll Theme Page](https://jekyllthemes.io/free)에 가서 원하는 테마를 골라봅시다.
 
 
 
