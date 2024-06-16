@@ -1,21 +1,11 @@
 ---
 title: "[WebLogic] 웹로직 콘솔 특정 ip 접속 제한 방법"
-author: Ingyung Park
 date: 2020-12-17 23:40:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **WebLogic Admin Console 특정 ip만 허용/차단 방법**
 

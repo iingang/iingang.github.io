@@ -1,22 +1,11 @@
 ---
 title: "[OHS] OHS Proxy 환경에서 DNS Cache로 인한 502 Error 발생"
-author: Ingyung Park
 date: 2022-05-10 18:00:00 +0900
 categories: [WEB,OHS]
 tags: [Web,OHS,Apache]
 typora-root-url: ./
 ---
 
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **OHS Proxy DNS Cache 이슈**
 

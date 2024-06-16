@@ -1,21 +1,11 @@
 ---
 title: "[DB 데이터베이스] 정규화 (Normalization) 및 이상 (Anomaly)"
-author: Ingyung Park
 date: 2020-12-27 01:00:00 +0900
 categories: [IT, Database]
 tags: [IT, DB, DataBase]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **정규화 (Normalization) 란?**
 

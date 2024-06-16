@@ -1,6 +1,5 @@
 ---
 title: "[OS 운영체제] 프로세스(Process)란?"
-author: Ingyung Park
 date: 2021-01-12 23:00:00 +0900
 categories: [IT, Operating System]
 tags: [IT, OS]

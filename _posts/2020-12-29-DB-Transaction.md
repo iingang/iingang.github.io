@@ -1,21 +1,11 @@
 ---
 title: "[DB 데이터베이스] 트랜잭션 (Transaction)"
-author: Ingyung Park
 date: 2020-12-29 20:00:00 +0900
 categories: [IT, Database]
 tags: [IT, DB, DataBase]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **트랜잭션(Transaction)이란?**
 

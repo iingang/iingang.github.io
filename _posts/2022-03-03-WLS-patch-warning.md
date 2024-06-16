@@ -1,24 +1,13 @@
 ---
 title: "[WebLogic] 웹로직 최신 패치 후, 보안성 경고 알람 disable 방법 "
-author: Ingyung Park
 date: 2022-03-03 18:00:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS]
 typora-root-url: ./
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
-
-# **웹로직 패치 후 보안 경고 disable 방법**
+# **웹로직 패치 후 보안 경고 없애는 방법**
 
 ---
 

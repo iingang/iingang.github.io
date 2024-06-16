@@ -1,21 +1,11 @@
 ---
 title: "[iPlanet] HTTP2020: cannot find template j2ee"
-author: Ingyung Park
 date: 2021-01-14 23:00:00 +0900
 categories: [WEB,iPlanet]
 tags: [iplanet,Web]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **SYMPTOMS**
 

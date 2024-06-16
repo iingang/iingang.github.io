@@ -1,18 +1,8 @@
 ---
 title: "[WebLogic] boot.properties 정리"
-author: Ingyung Park 
 date: 2020-11-14 01:30:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic]
----
-
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
 ---
 
 # **boot.properties 파일 default 위치**

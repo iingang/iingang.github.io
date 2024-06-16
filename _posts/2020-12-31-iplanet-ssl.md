@@ -1,21 +1,11 @@
 ---
 title: "[iPlanet] iPlanet SSL 인증서 등록 방법"
-author: Ingyung Park
 date: 2020-12-31 00:30:00 +0900
 categories: [WEB,iPlanet]
 tags: [iplanet,Web]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **iPlanet SSL 인증서 등록**
 

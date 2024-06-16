@@ -1,22 +1,10 @@
 ---
 title: "[WebLogic] 웹로직 서버 강제로 종료되는 현상  "
-author: Ingyung Park
 date: 2022-02-27 18:00:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS]
 typora-root-url: ./
 ---
-
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **웹로직 서버 셧다운 현상**
 

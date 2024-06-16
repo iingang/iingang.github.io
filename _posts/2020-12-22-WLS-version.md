@@ -1,21 +1,11 @@
 ---
 title: "[WebLogic] 웹로직 버전 확인 방법"
-author: Ingyung Park
 date: 2020-12-22 20:40:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS,version]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **WebLogic Version 확인**
 

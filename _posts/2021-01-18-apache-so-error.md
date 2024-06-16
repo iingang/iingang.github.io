@@ -1,21 +1,11 @@
 ---
 title: "[Apache] 아파치 기동 오류 - so 모듈 관련"
-author: Ingyung Park
 date: 2021-01-18 14:30:00 +0900
 categories: [WEB,Apache]
 tags: [Apache,Web]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **Apache 2.4.41 기동 실패 - so 파일 not found**
 

@@ -1,24 +1,13 @@
 ---
 title: "[OHS] OHS Wallet 인증서 삭제 방법"
-author: Ingyung Park
 date: 2022-06-15 14:00:00 +0900
 categories: [WEB,OHS]
 tags: [Web,OHS]
 typora-root-url: ./
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
-
-# **OHS Wallet 인증서 삭제 방법**
+# **OHS Wallet 인증서 삭제 명령어**
 
 ---
 

@@ -1,21 +1,11 @@
 ---
 title: "[DB 데이터베이스] 무결성 제약조건 (Integrity Constraint)"
-author: Ingyung Park
 date: 2020-12-14 19:30:00 +0900
 categories: [IT, Database]
 tags: [IT, DB, DataBase]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **무결성 (Integrity)이란?**
 

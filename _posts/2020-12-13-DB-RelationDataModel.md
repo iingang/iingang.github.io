@@ -1,21 +1,11 @@
 ---
 title: "[DB 데이터베이스] 관계형 데이터 모델 (Relation Data Model)"
-author: Ingyung Park
 date: 2020-12-13 22:30:00 +0900
 categories: [IT, Database]
 tags: [IT, DB, DataBase]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **관계형 데이터 모델 (Relation Data Model)**
 

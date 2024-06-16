@@ -1,21 +1,10 @@
 ---
 title: "[WebLogic] Apache rotatelogs 활용하여 웹로직 nohup 로그 일자별 순환 "
-author: Ingyung Park
 date: 2021-11-04 13:00:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS]
 ---
 
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **Apache rotatelogs 활용**
 

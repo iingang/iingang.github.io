@@ -1,6 +1,5 @@
 ---
 title: "[Kafka] Apache Kafka란?"
-author: Ingyung Park
 date: 2023-03-01 14:00:00 +0900
 categories: [Messaging System,Apache Kafka]
 tags: [Kafka, Message queue, Messaging System]
@@ -8,9 +7,7 @@ typora-root-url: ./
 ---
 
 
-<br/>
-
-# **Apache Kafka란?**
+# **Apache Kafka 개념**
 
 ---
 

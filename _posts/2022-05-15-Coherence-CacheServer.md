@@ -1,24 +1,13 @@
 ---
 title: "[Coherence] Coherence*Web Cache Server 동작 방식 "
-author: Ingyung Park
 date: 2022-05-15 18:00:00 +0900
 categories: [Coherence]
 tags: [coherence]
 typora-root-url: ./
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
-
-# **Coherence*Web Cache Server 동작 방식**
+# **Coherence*Web Cache Server 개념**
 
 ---
 

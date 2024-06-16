@@ -1,21 +1,11 @@
 ---
 title: "[WebLogic] 웹로직 UDDI Explorer 비활성화 방법"
-author: Ingyung Park
 date: 2020-12-22 21:50:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **WebLogic UDDI Explorer disable 방법**
 

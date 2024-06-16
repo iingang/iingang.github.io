@@ -1,21 +1,10 @@
 ---
 title: "[WebLogic] 웹로직 콘솔 /management 경로 막기"
-author: Ingyung Park
 date: 2021-03-07 16:00:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic]
 ---
 
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **웹로직 콘솔 /management 경로 막기**
 

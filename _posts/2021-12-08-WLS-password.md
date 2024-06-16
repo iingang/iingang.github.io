@@ -1,22 +1,10 @@
 ---
 title: "[WebLogic] 웹로직 콘솔 패스워드 복호화 "
-author: Ingyung Park
 date: 2021-12-08 10:00:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS]
 typora-root-url: ./
 ---
-
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **웹로직 내 암호화된 내용 복호화 방법**
 

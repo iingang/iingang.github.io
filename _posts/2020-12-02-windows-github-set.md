@@ -1,21 +1,11 @@
 ---
 title: "[Github 깃허브] Windows 환경에서 Github Blog 생성하기"
-author: Ingyung Park
 date: 2020-12-02 22:30:00 +0900
 categories: [Git Blog]
 tags: [Github, Blog, Jekyll]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **Jekyll 이란?**
 

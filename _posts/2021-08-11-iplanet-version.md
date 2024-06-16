@@ -1,21 +1,10 @@
 ---
 title: "[iPlanet] iPlanet server header 정보 제거"
-author: Ingyung Park
 date: 2021-08-11 17:00:00 +0900
 categories: [WEB,iPlanet]
 tags: [iplanet,Web]
 ---
 
----
-**Contents**
-
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 기본 설정은 아래와 같이 서버 정보 및 버전이 노출된다.
 
@@ -30,8 +19,7 @@ Escape character is '^]'.
 
 
 HTTP/1.1 400 Bad request
-Server: Oracle-iPlanet-Web-Server/7.0
-Date: Sat, 25 Jul 2020 03:42:12 GMT
+Server: Oracle-iPlanet-Web-Server/7.0date: Sat, 25 Jul 2020 03:42:12 GMT
 Content-length: 147
 Content-type: text/html
 Connection: close
@@ -68,8 +56,7 @@ Escape character is '^]'.
 
 
 HTTP/1.1 400 Bad request
-Server: https-test server
-Date: Sat, 25 Jul 2020 03:42:36 GMT
+Server: https-test serverdate: Sat, 25 Jul 2020 03:42:36 GMT
 Content-length: 147
 Content-type: text/html
 Connection: close

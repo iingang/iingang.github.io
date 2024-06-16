@@ -1,21 +1,11 @@
 ---
 title: "[WebLogic] 웹로직 Plan.xml 제거 방법"
-author: Ingyung Park
 date: 2020-12-14 12:30:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS,application]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **Plan.xml**
 

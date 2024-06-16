@@ -1,21 +1,11 @@
 ---
 title: "[WebLogic] 웹로직 HTTP method 제한 방법"
-author: Ingyung Park
 date: 2020-12-10 22:30:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic,WAS]
 ---
 
----
-**Contents**
 
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
----
-
-<br/>
 
 # **SOLUTION**
 
