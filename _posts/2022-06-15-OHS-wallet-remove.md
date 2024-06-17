@@ -2,12 +2,12 @@
 title: "[OHS] OHS Wallet 인증서 삭제 방법"
 date: 2022-06-15 14:00:00 +0900
 categories: [WEB,OHS]
-tags: [Web,OHS]
+tags: [Web,OHS,SSL]
 typora-root-url: ./
 ---
 
 
-# **OHS Wallet 인증서 삭제 명령어**
+# **OHS Wallet 인증서 삭제**
 
 ---
 

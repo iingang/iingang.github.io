@@ -1,6 +1,6 @@
 ---
 title: "[Typora] 타이포라 이미지 경로 변경 (feat. Git Blog)"
-date: 2024-06-17 14:00:00 +0900
+date: 2024-06-17 09:00:00 +0900
 categories: [Typora]
 tags: [Typora, Image, blog]
 typora-root-url: ./
