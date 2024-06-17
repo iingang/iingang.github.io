@@ -40,7 +40,7 @@ Datagen Source Connector를 설치한 후, 아래와 같은 설정 파일을 사
 confluent-hub install confluentinc/kafka-connect-datagen:latest
 ```
 
-```bash
+```json
 {
   "name": "datagen-users",
   "config": {
@@ -99,7 +99,7 @@ topics=connect-test
 
 
 
-```bash
+```json
 {
   "name": "FileStreamSinkConnectorConnector_1",
   "config": {
