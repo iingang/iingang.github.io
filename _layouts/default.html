@@ -15,6 +15,7 @@ layout: compress
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
+  <!-- 광고 팝업? -->
   <!-- google adsense -->
   {% include ad.html %}
 
@@ -40,6 +41,7 @@ layout: compress
             <div class="access">
               {% include_cached update-list.html lang=lang %}
               {% include_cached trending-tags.html lang=lang %}
+				<!-- 사이드바-->
 			  	<!-- google adsense -->
 				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794418288099503"
 				 crossorigin="anonymous"></script>
@@ -73,6 +75,7 @@ layout: compress
             {% endfor %}
 
             {% include_cached footer.html lang=lang %}
+			<!-- 블로그 가장 하단-->
 			<!-- google adsense -->
 			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794418288099503"
 				 crossorigin="anonymous"></script>

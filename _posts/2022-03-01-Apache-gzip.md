@@ -15,14 +15,14 @@ typora-root-url: ./
 
 gzip을 이용하기 위해서는 deflate_module을 사용해야 한다.
 
-${APACHE_HOME}/modules 경로에 mod_deflate.so 모듈이 없으면 설치하도록 하자.
+**${APACHE_HOME}/modules** 경로에 **mod_deflate.so** 모듈이 없으면 설치하자.
 
 <br/>
 
-기존에 설치된 Apache에 다운로드 받은 아파치 설치파일로 apxs를 이용해 설치하였다.
+기존에 설치된 Apache에 다운로드 받은 아파치 설치파일로 apxs를 이용해 설치했다.
 
-```sh
-$ ${APACHE_HOME}/bin/apxs -i -a -c ${APACHE_installFile}/httpd-2.4.41/modules/filters/mod_deflate.c
+```bash
+${APACHE_HOME}/bin/apxs -i -a -c ${APACHE_installFile}/httpd-2.4.41/modules/filters/mod_deflate.c
 ```
 
 
@@ -33,16 +33,14 @@ $ ${APACHE_HOME}/bin/apxs -i -a -c ${APACHE_installFile}/httpd-2.4.41/modules/fi
 
 설치 후 모듈 정상로드 되는지 확인
 
-```sh
-$ ./httpd -t -D DUMP_MODULES | grep deflate_module
+```bash
+./httpd -t -D DUMP_MODULES | grep deflate_module
 deflate_module (shared)
 ```
 
 <br/>
 
 정상적으로 load 되었으면 **httpd.conf** 파일에 아래 내용 추가
-
-
 
 ```
 LoadModule deflate_module modules/mod_deflate.so
