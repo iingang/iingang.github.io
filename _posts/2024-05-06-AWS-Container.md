@@ -1,18 +1,14 @@
 ---
-title: "[AWS SAA] Container(컨테이너) "
+title: "[AWS SAA] Container (컨테이너) "
 date: 2024-05-06 09:00:00 +0900
 categories: [Cloud,AWS]
 tags: [Cloud, AWS, Container, SAA]
 typora-root-url: ./
 ---
 
-## **Container (컨테이너)**
 
-------
 
-<br/>
-
-### **Amazon ECS(Elastic Container Service)**
+## **Amazon ECS (Elastic Container Service)**
 
 ---
 
@@ -22,7 +18,7 @@ typora-root-url: ./
 
 <br/>
 
-### **AWS Fargate**
+## **AWS Fargate**
 
 ---
 
@@ -32,7 +28,7 @@ typora-root-url: ./
 
 <br/>
 
-### **Amazon ECR(Elastic Container Registry)**
+## **Amazon ECR (Elastic Container Registry)**
 
 ---
 
@@ -42,7 +38,7 @@ typora-root-url: ./
 
 <br/>
 
-### **Amazon EKS(Elastic Kubernetes Service)**
+## **Amazon EKS (Elastic Kubernetes Service)**
 
 ---
 
@@ -55,7 +51,7 @@ typora-root-url: ./
 
 <br/>
 
-### **AWS App Runner**
+## **AWS App Runner**
 
 ---
 
