@@ -59,7 +59,7 @@ confluent-hub install confluentinc/kafka-connect-datagen:latest
 
 위 설정은 `datagen-users`라는 이름으로 Datagen Source Connector를 설정하며, `users` 토픽에 데이터를 생성한다.
 
-
+<br/>
 
 ### **FileStream Sink Connector 생성**
 
@@ -145,3 +145,4 @@ topics=connect-test
 
 [https://github.com/confluentinc/kafka-connect-datagen/tree/master/config](https://github.com/confluentinc/kafka-connect-datagen/tree/master/config)
 
+<br/>

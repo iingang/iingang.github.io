@@ -22,7 +22,7 @@ sudo -i
 useradd kafka
 ```
 
-
+<br/>
 
 ## SUDO 권한 설정
 
@@ -30,7 +30,7 @@ useradd kafka
 echo "kafka ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/kafka
 ```
 
-
+<br/>
 
 ## 방화벽 중지 및 비활성화
 
@@ -42,7 +42,7 @@ sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 ```
 
-
+<br/>
 
 ## SELinux 해제
 
@@ -53,7 +53,7 @@ sudo vi /etc/selinux/config
 sudo reboot
 ```
 
-
+<br/>
 
 ## Packages 설치
 
@@ -63,7 +63,7 @@ sudo reboot
 sudo yum install -y gcc make openssl-devel bzip2-devel libfㅣfi-devel xz-devel java-11-openjdk
 ```
 
-
+<br/>
 
 ## hosts 파일 설정
 
@@ -79,7 +79,7 @@ sudo vi /etc/hosts
 
 > Ansible로 Confluent 설치 시, Python 설치가 필요함
 
-
+<br/>
 
 ## Confluent Platform 다운로드
 
@@ -91,7 +91,7 @@ curl -O https://packages.confluent.io/archive/6.1/confluent-6.1.0.tar.gz
 
 
 
-
+<br/>
 
 ## 압축 해제
 
@@ -101,7 +101,7 @@ curl -O https://packages.confluent.io/archive/6.1/confluent-6.1.0.tar.gz
 tar -zxvf confluent-6.1.0.tar.gz
 ```
 
-
+<br/>
 
 ## zookeeper.properies 파일 수정
 
@@ -120,7 +120,7 @@ server.1=localhost:2888:3888
 echo 1 > /tmp/zookeeper/myid
 ```
 
-
+<br/>
 
 ## Zookeeper myid 저장되는 위치 디렉토리 생성
 
@@ -130,7 +130,7 @@ echo 1 > /tmp/zookeeper/myid
 mkdir -p /tmp/zookeeper
 ```
 
-
+<br/>
 
 
 
@@ -171,7 +171,7 @@ log.retention.hours: 168
 zookeeper.connect=localhost:2181
 ```
 
-
+<br/>
 
 ## Zookeeper 실행
 
@@ -181,7 +181,7 @@ zookeeper.connect=localhost:2181
 sudo /home/kafka/confluent/confluent-6.1.0/bin/zookeeper-server-start /home/kafka/confluent/confluent-6.1.0/etc/kafka/zookeeper.properties
 ```
 
-
+<br/>
 
 ## Broker 실행
 
@@ -191,7 +191,7 @@ sudo /home/kafka/confluent/confluent-6.1.0/bin/zookeeper-server-start /home/kafk
 sudo /home/kafka/confluent/confluent-6.1.0/bin/kafka-server-start /home/kafka/confluent/confluent-6.1.0/etc/kafka/server.properties
 ```
 
-
+<br/>
 
 
 
@@ -217,7 +217,7 @@ confluent.controlcenter.data.dir: /home/kafka/confluent/confluent-6.1.0/logs/con
 confluent.controlcenter.connect.connect-cluster.cluster: http://[호스트명]:8083
 ```
 
-
+<br/>
 
 ## ControlCenter 기동
 
@@ -229,3 +229,4 @@ sudo /home/kafka/confluent/confluent-6.1.0/bin/control-center-start /home/kafka/
 
 
 
+<br/>
