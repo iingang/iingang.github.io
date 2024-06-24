@@ -28,6 +28,8 @@ $code-dot-gap: 0.5rem !default;
 $code-icon-width: 1.75rem !default;
 
 /* fonts */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-$font-family-base: 'Source Sans Pro', 'Microsoft Yahei', sans-serif !default;
+$font-family-base: 'Spoqa Han Sans Neo', 'Microsoft Yahei', sans-serif !default;
+/* $font-family-base: 'Source Sans Pro', 'Microsoft Yahei', sans-serif !default; */
 $font-family-heading: Lato, 'Microsoft Yahei', sans-serif !default;

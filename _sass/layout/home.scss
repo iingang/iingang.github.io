@@ -1,6 +1,7 @@
 /*
   Style for Homepage
 */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 #post-list {
   margin-top: 2rem;
@@ -85,7 +86,8 @@
 
 .pagination {
   color: var(--text-color);
-  font-family: Lato, sans-serif;
+  font-family: Spoqa Han Sans Neo, sans-serif;
+/*  font-family: Lato, sans-serif; */
   justify-content: space-evenly;
 
   a:hover {
