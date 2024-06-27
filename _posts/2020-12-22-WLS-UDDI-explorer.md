@@ -113,7 +113,6 @@ rm -rf uddi uddiexplorer
 
 ```sh
 <Warning> <Deployer> <BEA-149617> <Non-critical internal application uddi was not deployed. Error: [Deployer:149158]No application files exist at '<WL_HOME>\server\lib\uddi.war'.>
-
 <Warning> <Deployer> <BEA-149617> <Non-critical internal application uddiexplorer was not deployed. Error: [Deployer:149158]No application files exist at '<WL_HOME>\server\lib\uddiexplorer.war'.>
 ```
 
@@ -127,6 +126,10 @@ rm -rf uddi uddiexplorer
 
 <br/>
 
-**[참고 문서] : Oracle Doc ID 1274906.1** 
+## **References**
+
+---
+
+How to Disable the UDDI and UDDI Explorer Functionality in WebLogic Server (Doc ID 1274906.1)
 
 <br/>
