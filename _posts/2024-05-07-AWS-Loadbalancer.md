@@ -2,7 +2,7 @@
 title: "[AWS SAA] Load Balancer(로드밸런서) - NLB / ALB / GWLB / CLB "
 date: 2024-05-07 09:00:00 +0900
 categories: [Cloud,AWS]
-tags: [Cloud, AWS, LB, SAA, LoadBalancer]
+tags: [Cloud, AWS, LB, SAA, Load Balancer]
 typora-root-url: ./
 ---
 
