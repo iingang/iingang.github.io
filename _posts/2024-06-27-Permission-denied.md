@@ -3,6 +3,7 @@ title: "[RHEL 8] hostnamectl, timedatectl 명령어 실행 시, 에러 발생"
 date: 2024-06-27 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, Error, RedHat Linux, RHEL]
+typora-root-url: ./
 ---
 
 # **Symptoms**

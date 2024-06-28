@@ -1,7 +1,7 @@
 ---
 title: "[Coherence] Coherence*Web Cache Server 동작 방식 "
 date: 2022-05-15 18:00:00 +0900
-categories: [Coherence]
+categories: [Clustering, Coherence]
 tags: [coherence]
 typora-root-url: ./
 ---
