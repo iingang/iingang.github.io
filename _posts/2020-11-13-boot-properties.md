@@ -1,5 +1,5 @@
 ---
-title: "[WebLogic] boot.properties 정리"
+title: "[WebLogic] boot.properties 정리 / 웹로직 계정 초기화 방법"
 date: 2020-11-14 01:30:00 +0900
 categories: [WAS,WebLogic]
 tags: [WebLogic]
