@@ -8,7 +8,7 @@ typora-root-url: ./
 
 
 
-## **HTTP 및 Client-Server 간 데이터 통신 방식**
+## **HTTP 설명 & Client-Server 간 데이터 통신 방식**
 
 ---
 
