@@ -14,7 +14,9 @@ typora-root-url: ./
 
 {: .prompt-info }
 
-> RHEL 8.4 기반
+> Red Hat Enterprise Linux 8.4
+>
+> VMware vSphere
 
 <br/>
 
@@ -25,6 +27,8 @@ typora-root-url: ./
 ### **RHEL 8.4 dvd.iso 파일 마운트**
 
 ---
+
+vSphere 콘솔에서 CD/DVD 드라이브에 iso 파일이 연결된 것을 확인하고 mount 명령어를 실행한다.
 
 ```bash
 [root@localhost ~]# mount /dev/sr0 /media
@@ -56,6 +60,8 @@ dr-xr-xr-x. 4 root root  2048  7월  1  2022 AppStream
 
 ---
 
+킥스타트 파일을 만들어줄 위치에 폴더를 생성한다.
+
 ```bash
 mkdir -p /tmp/ks_rhel84
 ```
@@ -67,6 +73,8 @@ mkdir -p /tmp/ks_rhel84
 ### **디렉토리 전체 내용 복사**
 
 ---
+
+/media로 마운트된 이미지 파일 내용 전체를 킥스타트를 생성하려는 위치인 /tmp/ks_rhel84로 전체 복사한다.
 
 ```bash
 cp -avp /media/. /tmp/ks_rhel84
@@ -93,7 +101,7 @@ dr-xr-xr-x.  7 root root   259  7월  1  2022 .
 drwxrwxrwt. 10 root root  4096  6월 27 16:35 ..
 ```
 
-**`.discinfo`**, **`.treeinfo`** 파일까지 복사되었는지 확인
+**`.discinfo`**, **`.treeinfo`** 파일까지 복사되었는지 확인하자.
 
 <br/>
 
@@ -101,8 +109,10 @@ drwxrwxrwt. 10 root root  4096  6월 27 16:35 ..
 
 ---
 
+내부 디렉토리 구성은 원하는대로 하면 되는데, 여기서는 kickstart 경로에 ks.cfg 파일을 구성하고, Patch 경로에 커널 업데이트를 위한 패키지 저장을 하려고 다음과 같이 구성했다.
+
 ```bash
-mkdir -p /tmp/ks_rhel84/kickstart # Kickstart Script 저장을 위한 디렉토리
+mkdir -p /tmp/ks_rhel84/kickstart # Kickstart file 저장을 위한 디렉토리
 mkdir -p /tmp/ks_rhel84/Patch # 패치 패키지 저장을 위한 디렉토리
 ```
 
@@ -111,6 +121,8 @@ mkdir -p /tmp/ks_rhel84/Patch # 패치 패키지 저장을 위한 디렉토리
 ### **디렉토리 권한 추가**
 
 ---
+
+복사한 파일 전체에 user 쓰기 권한을 추가한다.
 
 ```bash
 chmod -R u+w /tmp/ks_rhel84/.
@@ -121,6 +133,8 @@ chmod -R u+w /tmp/ks_rhel84/.
 ### **패키지 파일 복사 (SFTP 사용)**
 
 ---
+
+미리 다운로드 받은 패키지 파일들을 SFTP Tool을 이용하여 전체 복사한다.
 
  ```bash
  /tmp/ks_rhel/Patch 경로로 rpm 패키지 파일들 복사
@@ -134,7 +148,7 @@ chmod -R u+w /tmp/ks_rhel84/.
 
 ---
 
-각 패치디렉토리 위치에서 createrepo 명령어를 실행한다. (yum 설치 필요)
+각 패치 디렉토리 위치에서 createrepo 명령어를 실행한다. (yum 설치 필요)
 
 ```bash
 cd /tmp/ks_rhel84/Patch
@@ -144,7 +158,15 @@ cd /tmp/ks_rhel84/Patch
 createrepo .
 ```
 
-위 명령어로 repodata 디렉토리가 생성된 것을 볼 수 있다.
+```bash
+[root@localhost Patch]# ls -rtl
+...
+-rw-r--r--. 1 root root      3096  7월  3 15:16 repomd.xml
+-rw-r--r--. 1 root root  10520280  7월  3 16:14 kernel-4.18.0-513.9.1.el8_9.x86_64.rpm
+drwxr-xr-x. 2 root root      4096  7월  3 16:14 repodata
+```
+
+repodata 디렉토리가 생성된 것을 볼 수 있다.
 
 
 
