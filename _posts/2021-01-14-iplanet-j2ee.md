@@ -7,7 +7,7 @@ tags: [iplanet,Web]
 
 
 
-# **SYMPTOMS**
+## **SYMPTOMS**
 
 ---
 
@@ -15,7 +15,7 @@ tags: [iplanet,Web]
 
 <br/>
 
-로그를 보니 다음과 같은 에러 발생
+로그를 보니 다음과 같은 에러 발생했다.
 
 ```shell
 process-uri-objects reports: HTTP2020: cannot find template j2ee
@@ -27,25 +27,25 @@ process-uri-objects reports: HTTP2020: cannot find template j2ee
 
 <br/>
 
-# **CAUSE**
+## **CAUSE**
 
 ---
 
 
 
-mime type 설정이 제대로 동작하려면 iPlanet에서 JAVA를 비활성화해야 함
+mime type 설정이 제대로 동작하려면 iPlanet에서 **JAVA를 비활성화**해야 한다.
 
-그렇지 않으면 iPlanet 이  `*.jsp`로 끝나는 모든 요청을 처리하려고 시도하고 DocRoot 하위에서 리소스를 찾지 못하므로 404 오류를 반환
-
-<br/>
+그렇지 않으면 iPlanet 이  `*.jsp`로 끝나는 모든 요청을 처리하려고 시도하고 DocRoot 하위에서 리소스를 찾지 못하므로 404 오류를 반환한다.
 
 <br/>
 
-# **SOLUTION**
+<br/>
+
+## **SOLUTION**
 
 ---
 
-**[인스턴스명]-obj.conf** 파일을 보면 기본적으로 j2ee 사용 활성화가 되어있는데, 이 부분을 주석처리 혹은 삭제하면 됨
+**[인스턴스명]-obj.conf** 파일을 보면 기본적으로 j2ee 사용 활성화가 되어있는데, 이 부분을 주석처리 혹은 삭제하면 문제가 해결된다.
 
 <br/>
 

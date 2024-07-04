@@ -6,6 +6,9 @@ tags: [iplanet,Web]
 ---
 
 
+
+## **Server 정보 노출 확인**
+
 기본 설정은 아래와 같이 서버 정보 및 버전이 노출된다.
 
 이는 보안에 취약할 수 있다.
@@ -66,21 +69,27 @@ Connection: close
 
 <br/>
 
-${SERVER_HOME}/config 디렉토리에 있는 magnus.conf 파일에 다음 내용을 추가하는 방법도 있다.
+**${SERVER_HOME}/config/magnus.conf** 파일에 다음 내용을 추가하는 방법도 있다.
 
-(iPlanet 6점대에 적용)
+(iPlanet 6.x 버전에 적용)
 
-**ServerString none** 
+```bash
+ServerString none
+```
+
+
 
 <br/>
 
 <br/>
 
-### **reference**
+## **References**
 
 ---
 
 Oracle iPlanet Web Server 7.0 에서, 서버 및 버전 Header 정보를 변경하는 방법 (Doc ID 1539530.1)
 
 How to Change the Server and Version Header in Oracle iPlanet Web Server 6.1 ? (Doc ID 1505684.1)
+
+<br/>
 
