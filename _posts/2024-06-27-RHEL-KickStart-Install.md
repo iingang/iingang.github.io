@@ -638,3 +638,5 @@ Max brk space used 9ef000
 <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/performing_an_advanced_rhel_8_installation/index#creating-a-kickstart-file-by-performing-a-manual-installation_creating-kickstart-files>
 
 <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/kickstart-script-file-format-reference_system-design-guide#kickstart-file-format_kickstart-script-file-format-reference>
+
+<br/>
