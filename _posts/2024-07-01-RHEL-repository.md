@@ -1,5 +1,5 @@
 ---
-title: "[RHEL 7,8] RedHat Linux Local Repository 설정 (yum 사용)"
+title: "[Linux] RHEL 7,8 Local Repository 설정 (yum 사용)"
 date: 2024-07-01 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, RedHat Linux, RHEL, repository, yum]
