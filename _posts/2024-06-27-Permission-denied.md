@@ -1,5 +1,5 @@
 ---
-title: "[Linux/RHEL 8] hostnamectl, timedatectl 명령어 실행 시, 에러 발생"
+title: "[Linux/RHEL 8] hostnamectl 명령어 실행 시, Could not set property 에러 발생"
 date: 2024-06-27 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, Error, RedHat Linux, RHEL]
@@ -17,11 +17,11 @@ root@test /root # timedatectl
 Failed to query server: The name org.freedesktop.timedate1 was not provided by any .service files
 ```
 
-호스트명 변경하는 명령어 입력 시 아래와 같은 에러가 발생했다.
+호스트명 변경하는 명령어 입력 시 아래와 같은 오류가 발생했다.
 
-<span style="color: tomato">Could not set property: The name org.freedesktop.hostname1 was not provided by any .service files</span>
+**<span style="color: tomato">Could not set property: The name org.freedesktop.hostname1 was not provided by any .service files</span>**
 
-**/usr/share/dbus-1/system.d** 경로에 위에서 언급한 hostname, timedate 관련 conf 파일이 존재하나, 소유자는 root이고 권한은 644로 특이점은 없어보인다.
+**`/usr/share/dbus-1/system.d`** 경로에 위에서 언급한 hostname, timedate 관련 conf 파일이 존재하나, 소유자는 root이고 권한은 644로 특이점은 없어보인다.
 
 ```bash
 root@test /usr/share/dbus-1/system.d # ls -rtl
@@ -109,7 +109,7 @@ drwxr-x---. 165 root root   12288 Jun 27 23:06 etc
 
 <br/>
 
-디렉토리 권한을 <span style='background-color:#fff5b1'>**750 -> 755**</span>으로 변경해주니 에러가 감쪽같이 사라졌다.
+디렉토리 권한을 <span style='background-color:#fff5b1'>**750 -> 755**</span>으로 변경해주니 에러가 사라졌다.
 
 ```bash
 root@test /root # chmod 755 /etc
