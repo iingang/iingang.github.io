@@ -1,5 +1,9 @@
 /* The common styles */
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-subset.css");
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-full.css");
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
 
 html {
   @media (prefers-color-scheme: light) {
@@ -115,7 +119,7 @@ blockquote {
 }
 
 kbd {
-  font-family: inherit;
+  font-family: inherit; /*font-family: inherit;*/
   display: inline-block;
   vertical-align: middle;
   line-height: 1.3rem;

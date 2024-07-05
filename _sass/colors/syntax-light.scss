@@ -6,17 +6,17 @@
   /* --- custom light colors --- */
   --language-border-color: #ececec;
   --highlight-bg-color: #f6f8fa;
-  --highlighter-rouge-color: #3f596f;
+  --highlighter-rouge-color: #CA4E86;   /* 인라인코드 글자색 #3f596f */
   --highlight-lineno-color: #9e9e9e;
-  --inline-code-bg: #f6f6f7;
-  --code-color: #3a3a3a;
-  --code-header-text-color: #a3a3a3;
-  --code-header-muted-color: #e5e5e5;
-  --code-header-icon-color: #c9c8c8;
+  --inline-code-bg: #ffe6ed;  /* 인라인코드 배경색 #f6f6f7 */
+  --code-color: #CA4E86; /* 코드 글자색 #3a3a3a */
+  --code-header-text-color: #a3a3a3; 
+  --code-header-muted-color: #F4DFFD;  /* #e5e5e5 코드좌상단 동그라미3개*/
+  --code-header-icon-color: #DFA5F9;  /* #c9c8c8 코드우상단 복사표시*/
   --clipboard-checked-color: #43c743;
 
   [class^='prompt-'] {
-    --inline-code-bg: #fbfafa;
+    --inline-code-bg: #ffe6ed; /*prompt-info,tip 등 내부에 인라인코드 들어갈때 배경색*/
   }
 
   /* --- Syntax highlight theme from `rougify style github` --- */
@@ -183,7 +183,7 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #68717a;
+    color: #916FBF; /* 코드주석 글자색 #68717a*/
   }
 
   .highlight .gl {
