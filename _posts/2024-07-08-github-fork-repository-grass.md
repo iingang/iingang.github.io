@@ -8,7 +8,7 @@ typora-root-url: ./
 
 
 
-# **Github 잔디 누 현상**
+# **Github 잔디 누락 현상**
 
 ---
 
