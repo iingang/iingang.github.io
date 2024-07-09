@@ -1,5 +1,5 @@
 ---
-title: "[Pacemaker] Pacemaker 설치 및 클러스터 구성 (RHEL 8.X) "
+title: "[Pacemaker/RHEL] Pacemaker 설치 및 클러스터 구성 (RHEL 8.X) "
 date: 2024-07-02 18:00:00 +0900
 categories: [Clustering, Pacemaker]
 tags: [pacemaker, RHEL, RedHat]
@@ -21,7 +21,7 @@ typora-root-url: ./
 
 <br/>
 
-## **1. 사전 환경설정 (모든 노드)**
+## **1. 사전 환경설정 (모든 노드에서 입력)**
 
 ---
 
@@ -128,7 +128,7 @@ fence_kdump_nodes rhel88-02-hb # 상대 노드로 변경
 
 <br/>
 
-## **2. Pacemaker 설치 (모든 노드)**
+## **2. Pacemaker 설치 (모든 노드에서 입력)**
 
 ---
 
