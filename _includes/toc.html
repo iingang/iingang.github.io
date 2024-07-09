@@ -25,26 +25,32 @@
 		<script>
 			 (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-		 <script>
-		window.addEventListener('scroll', function() {
-		  var tocWrapper = document.getElementById('toc-wrapper');
-		  var tocWrapperAd = document.getElementById('toc-wrapper-ad');
-
-		  // toc-wrapper와 toc-wrapper-ad의 위치 정보 가져오기
-		  var tocRect = tocWrapper.getBoundingClientRect();
-		  var tocAdRect = tocWrapperAd.getBoundingClientRect();
-
-		  // toc-wrapper와 toc-wrapper-ad가 겹치는지 여부 확인
-		  var overlap = !(tocRect.bottom < tocAdRect.top || tocRect.top > tocAdRect.bottom);
-
-		  // 겹치면 toc-wrapper-ad에 fade-out 클래스 추가
-		  if (overlap) {
-			tocWrapperAd.classList.add('fade-out');
-		  } else {
-			tocWrapperAd.classList.remove('fade-out');
-		  }
-		});
 		
+		 <script>
+		 // 스크롤 이벤트 리스너 추가
+		window.addEventListener('scroll', function() {
+		var tocWrapper = document.getElementById('toc-wrapper');
+		var tocWrapperAd = document.getElementById('toc-wrapper-ad');
+
+		// 광고 요소를 선택하는 방법에 따라 다를 수 있으나, 예를 들어서 아래와 같이 구현할 수 있습니다.
+		var adContainer = tocWrapperAd.querySelector('.adsbygoogle');
+
+		// toc-wrapper와 toc-wrapper-ad의 위치 정보 가져오기
+		var tocRect = tocWrapper.getBoundingClientRect();
+		var tocAdRect = tocWrapperAd.getBoundingClientRect();
+
+		// 광고 요소의 위치 정보 가져오기
+		var adRect = adContainer.getBoundingClientRect();
+
+		// toc-wrapper와 toc-wrapper-ad가 겹치는지 여부 확인
+		var overlap = !(tocRect.bottom < tocAdRect.top || tocRect.top > tocAdRect.bottom);
+
+		// 광고가 toc-wrapper와 겹치면 fade-out 클래스 추가
+		if (overlap && (adRect.top < tocWrapper.clientHeight)) {
+		tocWrapperAd.classList.add('fade-out');
+		} else {
+		tocWrapperAd.classList.remove('fade-out');
+		}
 	  </script>
 	</div>
 {% endif %}
