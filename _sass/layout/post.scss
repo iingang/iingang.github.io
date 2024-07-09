@@ -258,6 +258,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 35rem;
+  z-index: 1; /* 겹치면 밑으로 */
   transition: top 0.2s ease-in-out;
   -webkit-animation: fade-up 0.8s;
   animation: fade-up 0.8s;
@@ -273,6 +274,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 4rem;
+  z-index: 2; /* 겹치면 위로 */
   transition: top 0.2s ease-in-out;
   -webkit-animation: fade-up 0.8s;
   animation: fade-up 0.8s;
