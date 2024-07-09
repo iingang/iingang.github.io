@@ -228,14 +228,45 @@ header {
   }
 }
 
+/* 사라지는 애니메이션 */
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden; /* 애니메이션이 완료되면 요소를 완전히 숨깁니다. */
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden; /* 애니메이션이 완료되면 요소를 완전히 숨깁니다. */
+  }
+}
+
+
+/* 광고를 위한 css */
 #toc-wrapper-ad {
   border-left: 1px solid rgba(158, 158, 158, 0.17);
   position: -webkit-sticky;
   position: sticky;
-  top: 20rem;
+  top: 35rem;
+  z-index: 1; /* 겹치면 밑으로 */
   transition: top 0.2s ease-in-out;
   -webkit-animation: fade-up 0.8s;
   animation: fade-up 0.8s;
+}
+
+#toc-wrapper-ad.fade-out {
+  -webkit-animation: fade-out 0.8s forwards;
+  animation: fade-out 0.8s forwards;
 }
 
 #toc-wrapper {
@@ -243,6 +274,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 4rem;
+  z-index: 2; /* 겹치면 위로 */
   transition: top 0.2s ease-in-out;
   -webkit-animation: fade-up 0.8s;
   animation: fade-up 0.8s;
@@ -252,7 +284,8 @@ header {
     font-size: 0.85rem;
     line-height: 1.25;
     padding-left: 0;
-
+	margin-bottom: 30px; /* 밑 광고 공간주기 */
+	
     li {
       &:not(:last-child) {
         margin: 0.4rem 0;
