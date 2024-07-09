@@ -1,5 +1,5 @@
 ---
-title: "[Github 깃허브] Windows 환경에서 Github Blog 생성하기"
+title: "[Github 깃허브/Jekyll] Windows 환경에서 Github Blog 생성하기"
 date: 2020-12-02 22:30:00 +0900
 categories: [ETC, Git Blog]
 tags: [Github, Blog, Jekyll]
@@ -120,6 +120,8 @@ jekyll -v
 생성이 완료되었으면, **https://[본인아이디].github.io** 로 접속했을 때 페이지 뜨면 성공!
 
 <br/>
+
+
 
 <br/>
 

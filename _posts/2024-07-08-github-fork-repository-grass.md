@@ -1,5 +1,5 @@
 ---
-title: "[Github 깃허브] Github 잔디 안 심어지는 현상 (feat. Git Blog)"
+title: "[Github 깃허브] Github 잔디 안 심어지는 현상 (feat. Github Blog)"
 date: 2024-07-08 09:30:00 +0900
 categories: [ETC, Git Blog]
 tags: [Github, Blog]
