@@ -275,8 +275,6 @@ Configuration saved to /etc/target/saveconfig.json
 
 <br/>
 
-
-
 ### **1. initiatorname 설정**
 
 ---
@@ -326,6 +324,8 @@ iscsid 서비스를 클라이언트 2개 노드에 각각 활성화한다.
 ### **4. iSCSI 디바이스 연결**
 
 ---
+
+RHEL88-01, RHEL88-02 각 노드에서 iSCSI 서버와 연결한다.
 
 **`iscsiadm -m node -T iqn.2024-07.local.pacemaker.test:7900 -p [iSCSI 서버 IP] -l`**
 
