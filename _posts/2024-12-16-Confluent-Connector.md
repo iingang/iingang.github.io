@@ -1,6 +1,6 @@
 ---
 title: "[Confluent] Confluent Connector 설치 및 생성"
-date: 2024-01-03 09:00:00 +0900
+date: 2023-12-16 09:00:00 +0900
 categories: [Messaging System,Confluent]
 tags: [Confluent, Message queue, Messaging System]
 typora-root-url: ./
