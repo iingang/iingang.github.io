@@ -2,7 +2,7 @@
 title: "[iPlanet] iPlanet SSL 인증서 등록 방법"
 date: 2020-12-31 00:30:00 +0900
 categories: [WEB,iPlanet]
-tags: [iplanet,Web]
+tags: [iplanet, Web]
 ---
 
 

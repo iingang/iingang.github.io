@@ -2,7 +2,7 @@
 title: "[Linux/RHEL 8] hostnamectl 명령어 실행 시, Could not set property 에러 발생"
 date: 2024-06-27 09:00:00 +0900
 categories: [OS, Linux]
-tags: [RedHat, Linux, Error, RedHat Linux, RHEL]
+tags: [RedHat, Linux, error, RedHat Linux, RHEL]
 typora-root-url: ./
 ---
 
