@@ -21,6 +21,8 @@ typora-root-url: ./
 > Red Hat Enterprise Linux 9.4 (Plow)
 >
 > VMware vSphere
+>
+> Red Hat Enterprise Linux 9.4 Binary DVD
 
 
 
