@@ -3,6 +3,7 @@ title: "[DB 데이터베이스] 무결성 제약조건 (Integrity Constraint)"
 date: 2020-12-14 19:30:00 +0900
 categories: [IT, Database]
 tags: [IT, DB, DataBase]
+typora-root-url: ./
 ---
 
 

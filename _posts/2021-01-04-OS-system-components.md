@@ -3,6 +3,7 @@ title: "[OS 운영체제] 운영체제 및 컴퓨터 시스템 기본 요소"
 date: 2021-01-04 22:30:00 +0900
 categories: [IT, Operating System]
 tags: [IT, OS]
+typora-root-url: ./
 ---
 
 

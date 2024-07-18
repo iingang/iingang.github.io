@@ -3,6 +3,7 @@ title: "[DB 데이터베이스] 관계형 데이터 모델 (Relation Data Model)
 date: 2020-12-13 22:30:00 +0900
 categories: [IT, Database]
 tags: [IT, DB, DataBase]
+typora-root-url: ./
 ---
 
 

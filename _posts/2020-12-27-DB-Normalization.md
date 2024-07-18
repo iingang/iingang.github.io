@@ -3,6 +3,7 @@ title: "[DB 데이터베이스] 정규화(Normalization) 및 이상(Anomaly)"
 date: 2020-12-27 01:00:00 +0900
 categories: [IT, Database]
 tags: [IT, DB, DataBase]
+typora-root-url: ./
 ---
 
 
