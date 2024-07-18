@@ -28,6 +28,18 @@ typora-root-url: ./
 
 <br/>
 
+<https://access.redhat.com/downloads/content/rhel>에 접속하여 DVD 파일을 다운로드 한다.
+
+![image-20240718141049913](/../assets/img/posts/2024-07-15-RHEL-9-Install/image-20240718141049913.png)
+
+<br/>
+
+여기서는 VMware vSphere 환경에 iso 파일을 업로드하여 설치를 진행하겠다.
+
+vSphere 설정은 [vSphere 환경 RHEL 설치 포스팅](https://iingang.github.io/posts/vSphere-rhel-install/)을 참고하면 된다.
+
+<br/>
+
 ### **0. 언어 선택**
 
 ---
