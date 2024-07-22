@@ -1,12 +1,12 @@
 ---
-title: "[Grafana/OnCall] 그라파나 온콜 Email Template Syntax (이중 for문)"
+title: "[Grafana 그라파나] Grafana OnCall Email Template Syntax (이중 for문)"
 date: 2024-05-16 09:00:00 +0900
 categories: [APM,Grafana]
 tags: [APM, Grafana, Enterprise, OnCall]
 typora-root-url: ./
 ---
 
-## **Grafana OnCall 템플릿 이중 for문 문법**
+## **그라파나 온콜 템플릿 이중 for문 문법**
 
 ---
 

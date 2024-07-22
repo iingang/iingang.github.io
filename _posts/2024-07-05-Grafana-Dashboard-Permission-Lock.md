@@ -1,5 +1,5 @@
 ---
-title: "[Grafana] 그라파나 대시보드 권한 잠금해제(Unlock) 방법"
+title: "[Grafana 그라파나] Grafana Dashboard 권한 잠금해제(Unlock) 방법"
 date: 2024-07-05 09:00:00 +0900
 categories: [APM,Grafana]
 tags: [APM, Grafana, Dashboard, Enterprise, Permission]
@@ -9,6 +9,10 @@ typora-root-url: ./
 ## **Grafana Dashboard Unlock Permissions**
 
 ---
+
+그라파나 대시보드 권한을 해제하는 방법에 대해 알아보자.
+
+<br/>
 
 ### **Symptoms**
 

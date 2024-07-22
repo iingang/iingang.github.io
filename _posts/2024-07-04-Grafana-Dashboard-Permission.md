@@ -1,12 +1,12 @@
 ---
-title: "[Grafana] 그라파나 대시보드 권한 설정 (특정 User 제한)"
+title: "[Grafana 그라파나] Grafana Dashboard Permissions Settings (특정 User 제한)"
 date: 2024-07-04 09:00:00 +0900
 categories: [APM,Grafana]
 tags: [APM, Grafana, Dashboard, Enterprise, Permission]
 typora-root-url: ./
 ---
 
-## **Grafana Dashboard Permissions Settings**
+## **그라파나 대시보드 권한 설정 방법**
 
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: "[Grafana] 그라파나 설치 방법 (Linux)"
+title: "[Grafana 그라파나] Grafana Install Guide (Linux)"
 date: 2024-01-07 09:00:00 +0900
 categories: [APM,Grafana]
 tags: [APM, Grafana, Enterprise]
 typora-root-url: ./
 ---
 
-## **OCI 환경 Grafana Install Guide**
+## **OCI 환경 그라파나 설치 방법**
 
 ---
 

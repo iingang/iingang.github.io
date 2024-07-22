@@ -1,5 +1,5 @@
 ---
-title: "[Grafana] 그라파나 No Data(event)일 때, 특정 User에게 알람 전송"
+title: "[Grafana 그라파나] 이벤트가 No Data(event)일 때, 특정 User에게 알람 전송"
 date: 2024-06-26 09:00:00 +0900
 categories: [APM,Grafana]
 tags: [APM, Grafana, Alert, Enterprise, OnCall]

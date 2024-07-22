@@ -1,12 +1,12 @@
 ---
-title: "[Grafana/OnCall] 그라파나 온콜 Email Template Alert ID 출력"
+title: "[Grafana 그라파나] Grafana OnCall Email Template Alert ID 출력"
 date: 2024-05-13 09:00:00 +0900
 categories: [APM,Grafana]
 tags: [APM, Grafana, Enterprise, OnCall]
 typora-root-url: ./
 ---
 
-## **Grafana OnCall Template Alert ID 추출하기**
+## **그라파나 온콜 템플릿 Alert ID 추출하기**
 
 ---
 

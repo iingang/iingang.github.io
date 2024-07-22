@@ -1,12 +1,12 @@
 ---
-title: "[Grafana/OnCall] 그라파나 온콜 설치 방법 (Linux)"
+title: "[Grafana 그라파나] Grafana OnCall Install Guide (Linux)"
 date: 2024-05-10 09:00:00 +0900
 categories: [APM,Grafana]
 tags: [APM, Grafana, Enterprise, OnCall]
 typora-root-url: ./
 ---
 
-## **Grafana Oncall Install Guide**
+## **그라파나 온콜 설치 방법 **
 
 ---
 
