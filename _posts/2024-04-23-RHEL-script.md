@@ -1,5 +1,5 @@
 ---
-title: "[Linux/RHEL] 리눅스(OS) 점검 파일 검토를 위한 Error 추출 명령어"
+title: "[Linux 리눅스] 리눅스(OS) 점검 파일 검토를 위한 Error 추출 명령어 (CentOS / RHEL)"
 date: 2024-04-23 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, RedHat Linux, RHEL, Script]

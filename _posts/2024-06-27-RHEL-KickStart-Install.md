@@ -1,5 +1,5 @@
 ---
-title: "[Linux/RHEL 8] 리눅스 Kickstart ISO 파일 생성(BIOS/UEFI 부팅, Baremetal(USB)/VM(CD-ROM) 설정 차이점 비교)"
+title: "[Linux 리눅스] 리눅스 Kickstart ISO 파일 생성(BIOS/UEFI 부팅, Baremetal(USB)/VM(CD-ROM) 설정 차이점 비교) - RHEL 8.x"
 date: 2024-06-27 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, Kickstart, RedHat Linux, RHEL]

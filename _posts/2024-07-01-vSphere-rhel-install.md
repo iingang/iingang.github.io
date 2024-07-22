@@ -1,5 +1,5 @@
 ---
-title: "[vSphere/Linux] Vmware vSphere 환경 RHEL 7.9 설치 방법"
+title: "[Linux 리눅스] Vmware vSphere 환경 RHEL 7.9 설치 방법"
 date: 2024-07-01 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, RedHat Linux, RHEL, vShphere]

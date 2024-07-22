@@ -1,5 +1,5 @@
 ---
-title: "[Linux/iSCSI] iSCSI 개념 및 설치, 구성 방법 (RHEL 8.X)"
+title: "[Linux 리눅스] iSCSI 개념 및 설치, 구성 방법 (RHEL 8.X)"
 date: 2024-07-10 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, RedHat Linux, RHEL, iscsi]

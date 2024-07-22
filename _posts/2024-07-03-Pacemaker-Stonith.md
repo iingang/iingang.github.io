@@ -1,5 +1,5 @@
 ---
-title: "[Pacemaker/RHEL 8] Pacemaker STONITH 구성"
+title: "[Pacemaker 페이스메이커] Pacemaker STONITH 구성 (RHEL 8)"
 date: 2024-07-03 18:00:00 +0900
 categories: [Clustering, Pacemaker]
 tags: [pacemaker, RHEL, RedHat]

@@ -1,5 +1,5 @@
 ---
-title: "[vSphere/Linux] Vmware vSphere에서 생성한 VM 복제 및 디스크 용량 변경 방법"
+title: "[Linux 리눅스] Vmware vSphere에서 생성한 VM 복제 및 디스크 용량 변경 방법"
 date: 2024-07-18 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, RedHat Linux, RHEL, vShphere]
@@ -8,7 +8,7 @@ typora-root-url: ./
 
 
 
-## **vSphere VM 복제하기**
+## **vSphere 리눅스 VM 복제하기**
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "[Linux/RHEL 8] 리눅스 시스템 정보 확인 (CPU, Memory, Disk, LVM)"
+title: "[Linux 리눅스] 리눅스 시스템 정보 확인 - CPU, Memory, Disk, LVM (RHEL, CentOS)"
 date: 2023-03-03 00:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, RedHat Linux, RHEL]

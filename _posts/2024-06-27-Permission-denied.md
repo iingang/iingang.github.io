@@ -1,5 +1,5 @@
 ---
-title: "[Linux/RHEL 8] hostnamectl 명령어 실행 시, Could not set property 에러 발생"
+title: "[Linux 리눅스] hostnamectl 명령어 실행 시, Could not set property 에러 발생 (RHEL 8.x)"
 date: 2024-06-27 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, error, RedHat Linux, RHEL]

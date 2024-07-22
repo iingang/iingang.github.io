@@ -1,5 +1,5 @@
 ---
-title: "[Linux/RHEL 7] LVM 볼륨 수동 생성 방법 (Pacemaker 사용 환경)"
+title: "[Linux 리눅스] LVM 볼륨 수동 생성 방법 (RHEL 7 Pacemaker 사용 환경)"
 date: 2024-07-09 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, RedHat Linux, RHEL, LVM, pacemaker]
