@@ -12,7 +12,7 @@ typora-root-url: ./
 
 ---
 
-vim으로 수정을 원하는 파일을 열고, **`Ctrl + v`**로 비주얼 블록 모드로 진입한다.
+vim으로 수정하고자 하는 파일을 열고, **`Ctrl + v`**로 비주얼 블록 모드로 진입한다.
 
 좌측 하단에 **<span style='background-color:#fff5b1'>VISUAL BLOCK</span>** 이라고 보이면 잘 진입한 것이다.
 
@@ -34,7 +34,7 @@ vim으로 수정을 원하는 파일을 열고, **`Ctrl + v`**로 비주얼 블�
 
 ![image-20240722111024575](/../assets/img/posts/2024-07-22-vim-visual-block/image-20240722111024575.png)
 
-</br>
+<br/>
 
 **`Esc`**로 삽입 모드에서 빠져나오면, <span style='background-color:#fff5b1'>선택된 모든 줄에 추가한 내용(띄어쓰기, 단어 삽입, 주석 등)이 반영</span>된다.
 
