@@ -44,7 +44,7 @@ typora-root-url: ./
 
 - AWS에 관리형 kubernetes 클러스터를 실행할 수 있는 서비스
 - 컨테이너화한 앱의 자동 배포, 확장, 관리 지원
-- `EKS Connector`: 아래의 Kubernetes 클러스터를 AWS에 등록하고 연결할 수 있으며, Amazon EKS 콘솔에서 시각화할 수 있음
+- **`EKS Connector`**: 아래의 Kubernetes 클러스터를 AWS에 등록하고 연결할 수 있으며, Amazon EKS 콘솔에서 시각화할 수 있음
   - 온프레미스 Kubernetes 클러스터
   - Amazon EC2에서 실행 중인 자체 관리형 클러스터
   - 다른 클라우드 공급자의 관리형 클러스터
