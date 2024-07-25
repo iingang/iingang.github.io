@@ -6,7 +6,7 @@ tags: [APM, Grafana, Enterprise]
 typora-root-url: ./
 ---
 
-## **OCI 환경 그라파나 설치 방법**
+## **OCI 환경 그라파나 리눅스 설치 방법**
 
 ---
 

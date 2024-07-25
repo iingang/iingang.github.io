@@ -7,7 +7,7 @@ tags: [WebLogic,WAS,version]
 
 
 
-# **WebLogic Version 확인**
+# **WebLogic Version 확인하기**
 
 ---
 
