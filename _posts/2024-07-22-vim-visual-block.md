@@ -1,5 +1,5 @@
 ---
-title: "[Linux 리눅스] Vim Visual Block(비주얼 블록) 사용 방법 - 여러 줄 한 번에 띄어쓰기 or 한 번에 주석 처리하기"
+title: "[Linux 리눅스] Vim Visual Block(비주얼 블록) 사용 방법 - 여러 줄 한 번에 띄어쓰기, 주석 처리하기"
 date: 2024-07-22 09:00:00 +0900
 categories: [OS, Linux]
 tags: [Linux, RedHat Linux, RHEL]

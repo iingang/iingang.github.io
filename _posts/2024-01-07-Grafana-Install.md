@@ -10,6 +10,8 @@ typora-root-url: ./
 
 ---
 
+{: .prompt-info}
+
 > OS: Oracle Linux 8.8
 >
 > Version: Grafana Enterprise 8.2.3
