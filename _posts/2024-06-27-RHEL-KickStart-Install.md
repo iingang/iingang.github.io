@@ -1,5 +1,5 @@
 ---
-title: "[Linux 리눅스] 리눅스 Kickstart ISO 파일 생성(BIOS/UEFI 부팅, Baremetal(USB)/VM(CD-ROM) 설정 차이점 비교) - RHEL 8.x"
+title: "[Linux 리눅스] 리눅스 Kickstart ISO 파일 생성 - BIOS, UEFI 부팅 / Baremetal(USB), VM(CD-ROM) 설정 차이점 비교 (RHEL 8.x)"
 date: 2024-06-27 09:00:00 +0900
 categories: [OS, Linux]
 tags: [RedHat, Linux, Kickstart, RedHat Linux, RHEL]
@@ -20,7 +20,7 @@ typora-root-url: ./
 
 <br/>
 
-## **Kickstart 설치 가이드**
+## **Kickstart (킥스타트) 설치 가이드**
 
 ---
 
@@ -62,9 +62,7 @@ dr-xr-xr-x. 4 root root  2048  7월  1  2022 AppStream
 
 킥스타트 파일을 만들어줄 위치에 폴더를 생성한다.
 
-```bash
-mkdir -p /tmp/ks_rhel84
-```
+**`mkdir -p /tmp/ks_rhel84`**
 
 
 
@@ -76,13 +74,11 @@ mkdir -p /tmp/ks_rhel84
 
 /media로 마운트된 이미지 파일 내용 전체를 킥스타트를 생성하려는 위치인 /tmp/ks_rhel84로 전체 복사한다.
 
-```bash
-cp -avp /media/. /tmp/ks_rhel84
-```
+**`cp -avp /media/. /tmp/ks_rhel84`**
+
+**`ls -rtla`**
 
 ```bash
-[root@localhost ks_rhel84]# ls -rtla
-합계 64
 -r--r--r--.  1 root root   103  7월  1  2022 media.repo
 -r--r--r--.  1 root root    60  7월  1  2022 .discinfo
 -r--r--r--.  1 root root  5134  7월  1  2022 RPM-GPG-KEY-redhat-release
@@ -124,9 +120,7 @@ mkdir -p /tmp/ks_rhel84/Patch # 패치 패키지 저장을 위한 디렉토리
 
 복사한 파일 전체에 user 쓰기 권한을 추가한다.
 
-```bash
-chmod -R u+w /tmp/ks_rhel84/.
-```
+**`chmod -R u+w /tmp/ks_rhel84/.`**
 
 <br/>
 
@@ -134,11 +128,18 @@ chmod -R u+w /tmp/ks_rhel84/.
 
 ---
 
-미리 다운로드 받은 패키지 파일들을 SFTP Tool을 이용하여 전체 복사한다.
+미리 다운로드 받은 rpm 패키지 파일들을 SFTP 툴을 이용하여 **`/tmp/ks_rhel/Patch`** 경로에 복사하고 잘 업로드되었는지 확인한다.
 
- ```bash
- /tmp/ks_rhel/Patch 경로로 rpm 패키지 파일들 복사
- ```
+**`cd /tmp/ks_rhel84/Patch`**
+
+**`ls -rtl`**
+
+```bash
+-rw-r--r--. 1 root root  10520280  7월  3 16:14 kernel-4.18.0-305.el8.x86_64.rpm
+..SKIP..
+```
+
+
 
 <br/>
 
@@ -148,25 +149,23 @@ chmod -R u+w /tmp/ks_rhel84/.
 
 ---
 
-각 패치 디렉토리 위치에서 createrepo 명령어를 실행한다. (yum 설치 필요)
-
-```bash
-cd /tmp/ks_rhel84/Patch
-```
+**`createrepo`** 명령어를 통해 특정 디렉토리에 있는 RPM 패키지들을 이용해 YUM 리포지토리를 생성한다.
 
 ```bash
 createrepo .
 ```
 
-```bash
-[root@localhost Patch]# ls -rtl
-...
--rw-r--r--. 1 root root      3096  7월  3 15:16 repomd.xml
--rw-r--r--. 1 root root  10520280  7월  3 16:14 kernel-4.18.0-513.9.1.el8_9.x86_64.rpm
-drwxr-xr-x. 2 root root      4096  7월  3 16:14 repodata
-```
+<br/>
 
-repodata 디렉토리가 생성된 것을 볼 수 있다.
+repodata 디렉토리가 생성된다.
+
+**`ls -rtl`**
+
+```bash
+-rw-r--r--. 1 root root  10520280  7월  3 16:14 kernel-4.18.0-305.el8.x86_64.rpm
+drwxr-xr-x. 2 root root      4096  7월  3 16:14 repodata
+..SKIP..
+```
 
 
 
@@ -178,13 +177,8 @@ repodata 디렉토리가 생성된 것을 볼 수 있다.
 
 ---
 
-```bash
-cd /tmp/ks_rhel84
-```
-
-```bash
-mkdir kickstart && cd kickstart
-```
+- **`cd /tmp/ks_rhel84`**
+- **`mkdir kickstart && cd kickstart`**
 
 아래 링크와 /root/ anaconda-ks.cfg를 참고하여 **ks.cfg 파일을 작성하여 위 경로에 생성**한다.
 
@@ -211,14 +205,51 @@ chmod 644 /tmp/ks_rhel84/kickstart/ks.cfg
 
 <br/>
 
-테스트한 내용은 실제 고객사 환경이기에 이곳에 적지는 않고, anaconda-ks.cfg 기본 파일로 적겠다.
+테스트한 내용은 실제 고객사 환경이므로 anaconda-ks.cfg 기본 파일에 이해하기 쉽도록 내용을 일부만 추가했다. (#####을 붙인 라인은 VM 설치 환경이고 Baremetal 설치와 비교되는 내용은 파일 아래에 추가 설명있음)
 
 ```bash
+# Use CDROM installation media
+##### cdrom
+harddrive --partition=LABEL=RHEL-8-4-0-KS-x86_64 --dir=/
+
 #version=RHEL8
 # Use graphical install
 graphical
 
-repo --name="AppStream" --baseurl=file:///run/install/sources/mount-0000-cdrom/AppStream
+url --url file:///mnt/intsall/repo/BaseOS
+repo --name="AppStream" --baseurl=file:///mnt/install/repo/AppStream
+
+%post --nochroot
+cp -r /mnt/install/repo/TEST /mnt/sysroot/mnt/
+%end
+
+%post
+##### chroot /mnt/sysimage
+##### mount -t iso9660 /dev/sr0 /media
+
+##### cat > /etc/yum.repos.d/rhel.repo <<'EOF'
+##### [RHEL84_Appstream]
+##### name=RHEL84_APP
+##### baseurl=file:///media/AppStream
+##### enabled=1
+##### gpgcheck=0
+
+##### [RHEL84_BaseOS]
+##### name=RHEL84_BASE
+##### baseurl=file:///media/BaseOS
+##### enabled=1
+##### gpgcheck=0
+##### EOF
+
+
+##### yum clean all
+##### yum update -y
+##### yum -y install kernel-4.18.0-513.9.1.el8_9.x86_64
+
+systemctl set-default multi-user.target
+systemctl daemon-reload
+
+%end
 
 %packages
 @^workstation-product-environment
@@ -240,7 +271,7 @@ repo --name="AppStream" --baseurl=file:///run/install/sources/mount-0000-cdrom/A
 @smart-card
 @system-tools
 kexec-tools
-
+kernel-4.18.0-513.9.1.el8_9.x86_64
 %end
 
 # Keyboard layouts
@@ -251,9 +282,6 @@ lang ko_KR.UTF-8
 # Network information
 network  --bootproto=dhcp --device=ens192 --ipv6=auto --activate
 network  --hostname=localhost.localdomain
-
-# Use CDROM installation media
-cdrom
 
 # Run the Setup Agent on first boot
 firstboot --enable
@@ -293,7 +321,7 @@ pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
 
 > **명령어 비교** (<span style="color: tomato">**VM (CD-ROM)**</span> / <span style="color: blue">**Baremetal (USB)**</span>)
 >
-> 1. Load 위치
+> 1. Installation Media (Load 위치)
 >
 >    - <span style="color: tomato">cdrom</span>
 >    - <span style="color: blue">harddrive --partition=LABEL=RHEL-8-4-0- --dir=/</span>
@@ -309,7 +337,7 @@ pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
 >      baseurl=file:///media/AppStream
 >      enabled=1
 >      gpgcheck=0
->      
+>
 >      [RHEL84_BaseOS]
 >      name=RHEL84_BASE
 >      baseurl=file:///media/BaseOS
@@ -334,9 +362,31 @@ pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
 >      ...packages...
 >      %end
 >      ```
+>
+> 4. 시스템 파일시스템 구조
+>
+>    - <span style="color: tomato">**`chroot /mnt/sysimage`** 명령어를 사용하여 설치된 시스템의 루트 파일 시스템을 새로운 루트 파일 시스템으로 설정, 즉 임시 환경에서 작업</span>
+>
+>      ```bash
+>      %post
+>      chroot /mnt/sysimage
+>      mount -t iso9660 /dev/sr0 /media
+>      ..SKIP
+>      %end
+>      ```
+>
+>    - <span style="color: blue">**`--nochroot`** 옵션을 사용하여 설치 중인 시스템의 루트 파일 시스템**(`/mnt/sysroot`)**을 직접 접근하여 작업 </span>
+>
+>      ```bash
+>      %post --nochroot
+>      cp -r /mnt/install/repo/TEST /mnt/sysroot/mnt/
+>      %end
+>      ```
 
 {: .prompt-warning }
 
+>  USB 부팅 디스크는 설치 환경에 마운트되어 있기 때문에 **`%post --nochroot`** 스크립트 내에서 직접 접근하기 어렵다.
+>
 >  이 외에 필요한 내용 구성도, CD-ROM / USB 구성 별로 사용 명령어가 다른 점을 이해하고 작성해야 한다.
 
 <br/>
@@ -353,9 +403,7 @@ Legacy BIOS 부팅 방식인지, UEFI 부팅 방식인지에 따라 수정해야
 
 **BIOS 부팅** 방식의 경우, **`isolinux.cfg`** 파일 수정
 
-```bash
-vi /tmp/ks_rhel84/isolinux/isolinux.cfg
-```
+**`vi /tmp/ks_rhel84/isolinux/isolinux.cfg`**
 
 ```bash
 default vesamenu.c32
@@ -462,7 +510,7 @@ menu end
 
 {: .prompt-warning }
 
-> *참고: **USB**를 만드는 경우 <span style='background-color:#E1F5FE'>64번째 라인</span>에서 CDROM을 대상으로 지정하는 대신 "**inst.ks=hd:LABEL=RHEL-8-4-0-KS-x86_64:/kickstart/ks.cfg quiet**"를 사용해야 한다.*
+> *참고: **USB**를 만드는 경우 <span style='background-color:#E1F5FE'>64번째 라인</span>에서 CDROM을 대상으로 지정하는 대신 "**inst.ks=hd:LABEL=RHEL-8-4-0-KS-x86_64:/kickstart/ks.cfg quiet**"를 사용해야 한다. 다만, RUFUS로 USB 부팅디스크 생성시 Label이 잘려서 **`RHEL-8-4-0-`** 이름으로 진행함*
 
 
 
@@ -546,7 +594,7 @@ submenu 'Troubleshooting -->' {
 
 {: .prompt-warning }
 
-> *참고: **USB**를 만드는 경우 <span style='background-color:#E1F5FE'>64번째 라인</span>에서 CDROM을 대상으로 지정하는 대신 "**inst.ks=hd:LABEL=RHEL-8-4-0-KS-x86_64:/kickstart/ks.cfg quiet**"를 사용해야 한다.*
+> *참고: **USB**를 만드는 경우 <span style='background-color:#E1F5FE'>64번째 라인</span>에서 CDROM을 대상으로 지정하는 대신 "**inst.ks=hd:LABEL=RHEL-8-4-0-KS-x86_64:/kickstart/ks.cfg quiet**"를 사용해야 한다. 다만, RUFUS로 USB 부팅디스크 생성시 Label이 잘려서 **`RHEL-8-4-0-`** 이름으로 진행함* 
 
 <br/>
 
@@ -560,6 +608,39 @@ submenu 'Troubleshooting -->' {
 yum install genisoimage
 ```
 
+<br/>
+
+여기서 -V 옵션(볼륨 이름)에 들어가는 내용은 위의 파일들에서 지정한 라벨명으로 해줘야한다. (RUFUS로 USB 부팅디스크 생성시 Label이 잘려서 **`RHEL-8-4-0-`** 이름으로 진행)
+
+```bash
+[ks.cfg]
+# Baremetal
+harddrive --partition=LABEL=RHEL-8-4-0-KS-x86_64 --dir=/
+
+# VM
+None
+
+=============================================================
+[grub.cfg]
+# Baremetal
+search --no-floppy --set=root -l 'RHEL-8-4-0-'
+
+# VM
+search --no-floppy --set=root -l 'RHEL-8-4-0-KS-x86_64'
+=============================================================
+
+[isolinux.cfg]
+# Baremetal
+  append initrd=initrd.img inst.repo=hd:LABEL=RHEL-8-4-0- inst.ks=hd:LABEL=RHEL-8-4-0-:/kickstart/ks.cfg quiet
+
+# VM
+  append initrd=initrd.img inst.ks=cdrom:/kickstart/ks.cfg quiet
+```
+
+<br/>
+
+Baremetal 환경에 RUFUS로 USB 부팅디스크 생성 시 **`RHEL-8-4-0-`**로 변경해서 실행했다. 
+
 ```bash
 mkisofs -o /tmp/rhel-8.4-kickstart.iso -V "RHEL-8-4-0-KS-x86_64" -input-charset utf-8 -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -J -joliet-long -R -T /tmp/ks_rhel84
 ```
@@ -567,6 +648,8 @@ mkisofs -o /tmp/rhel-8.4-kickstart.iso -V "RHEL-8-4-0-KS-x86_64" -input-charset 
 위 명령어를 실행하면 `/tmp/ks_rhel84` 디렉토리에 있는 파일들을 기반으로 부팅 가능한 ISO 이미지 파일인 `/tmp/rhel-8.4-kickstart.iso`가 생성되며, 이 ISO 파일은 BIOS 및 UEFI 기반 시스템에서 모두 부팅 가능하다.
 
 <br/>
+
+
 
 {: .prompt-info }
 
