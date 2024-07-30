@@ -220,8 +220,14 @@ F10을 눌러 저장하고 나온다.
 
 <br/>
 
-설치가 완료되면 다시 재부팅하고 F2로 BIOS 모드 진입하여 하드디스크 실행 순서를 바꿔준다.
+설치가 완료되면 재부팅하고 F2로 BIOS 모드 진입하여 하드디스크 실행 순서(+,-)를 바꾸고 F10을 눌러 저장한다.
 
 ![image-20240730154257515](/../assets/img/posts/2024-07-30-VMware-Workstation-USB-BIOS-Booting/image-20240730154257515.png)
+
+<br/>
+
+이제 VM을 다시 실행하고 설치가 잘 되었는지 확인하면 된다.
+
+![image-20240730164433476](/../assets/img/posts/2024-07-30-VMware-Workstation-USB-BIOS-Booting/image-20240730164433476.png)
 
 <br/>
