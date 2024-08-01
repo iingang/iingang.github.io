@@ -222,11 +222,19 @@ Complete!
 
 ---
 
+#### **패키지 다운로드 폴더 생성**
+
+---
+
 패키지 파일을 다운로드 받을 디렉토리를 생성한다.
 
 **`mkdir openssl && cd openssl`**
 
 <br/>
+
+#### **패키지 파일 다운로드**
+
+---
 
 resolve 옵션을 걸어 의존성있는 다른 패키지들까지 다운로드 받는다. 
 
@@ -266,7 +274,7 @@ yumdownloader가 아닌 repotrack 명령어를 사용하면 더 복잡한 패키
 
 <br/>
 
-#### **저장소 생성**
+#### **패키지 저장소 생성**
 
 ---
 
@@ -304,7 +312,7 @@ drwxr-xr-x 2 root root    4096 Jul 31 14:16 repodata
 
 <br/>
 
-#### **저장소 전송**
+#### **패키지 저장소 전송**
 
 ---
 
@@ -386,8 +394,6 @@ packages                                                                        
 
 ---
 
-
-
 #### **패키지 설치 (실패)**
 
 ---
@@ -450,8 +456,6 @@ total 4008
 -rw-r--r--. 1 root root   96596 Aug  1 15:07 openssh-askpass-8.0p1-19.el8_8.x86_64.rpm
 drwxr-xr-x. 2 root root    4096 Aug  1 15:12 repodata
 ```
-
-
 
 
 
