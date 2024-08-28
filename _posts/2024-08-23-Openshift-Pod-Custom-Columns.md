@@ -1,5 +1,5 @@
 ---
-title: "[OpenShift 오픈시프트] oc pod 생성 시간, 상태 출력 (custom-columns, jsonpath 사용)"
+title: "[OpenShift 오픈시프트] oc pod 생성 시간, 상태, IP 주소 및 컨테이너 이미지 출력 방법 (custom-columns, jsonpath 사용)"
 date: 2024-08-22 10:30:00 +0900
 categories: [Cloud,OpenShift]
 tags: [Cloud, OpenShift, RedHat]
@@ -30,7 +30,7 @@ typora-root-url: ./
 
 ---
 
-### **하나의 Pod에 대한 Creatation Time 출력**
+### **1.1. 하나의 Pod에 대한 Creatation Time 출력**
 
 ---
 
@@ -58,11 +58,13 @@ oc get pod dns-operator-676764fcbf-zqrbq -n openshift-dns-operator -o jsonpath='
 
 <br/>
 
-### **여러 Pod에 대한 Creatation Time 출력**
+### **1.2. 여러 Pod에 대한 Creatation Time 출력**
 
 ---
 
-전체 생성된 Pod 들에 대한 생성시간을 출력할 수 있다.
+전체 생성된 Pod 들에 대한 이름, 네임스페이스, **생성 시간**을 출력할 수 있다.
+
+<br/>
 
 **[example]**
 
@@ -96,9 +98,11 @@ openshift-cluster-node-tuning-operator             tuned-28rfm                  
 
 <br/>
 
-특정 namespace 에 속한 Pod 들에 대해서도 한 생성시간을 출력할 수 있다. 
+특정 namespace 에 속한 Pod 들에 대해서도 한 생성 시간을 출력할 수 있다. 
 
-namespace가 openshift-monitoring인 Pod 들의 생성시간을 살펴보자.
+namespace가 openshift-monitoring인 Pod 들의 생성 시간을 살펴보자.
+
+**<br/>**
 
 **[example]**
 
@@ -132,10 +136,7 @@ openshift-monitoring   prometheus-adapter-c6c557db7-8d5m2                       
 openshift-monitoring   prometheus-k8s-0                                         2024-07-19T07:05:14Z
 openshift-monitoring   prometheus-k8s-1                                         2024-07-19T07:04:57Z
 openshift-monitoring   prometheus-operator-5786f85b44-vkfpw                     2024-07-19T07:04:43Z
-openshift-monitoring   prometheus-operator-admission-webhook-58dcd458fb-rn65m   2024-07-19T07:04:40Z
-openshift-monitoring   prometheus-operator-admission-webhook-58dcd458fb-wf5wq   2024-07-19T07:04:40Z
-openshift-monitoring   telemeter-client-86bb7bb99d-zwnlk                        2024-07-19T07:04:53Z
-openshift-monitoring   thanos-querier-7554f5c5cf-dr46h                          2024-07-19T07:04:54Z
+..SKIP..
 ```
 
 <br/>
@@ -144,9 +145,11 @@ openshift-monitoring   thanos-querier-7554f5c5cf-dr46h                          
 
 ---
 
-현재 생성된 전체 Pod들에 대한 상태를 나타낼 수 있다.
+현재 생성된 전체 Pod들에 대한 **상태**를 나타낼 수 있다.
 
-[example]
+<br/>
+
+**[example]**
 
 ```bash
 oc get pods -A -o custom-columns='NAMESPACE:.metadata.namespace,NAME:.metadata.name,STATUS:.status.phase'
@@ -154,7 +157,7 @@ oc get pods -A -o custom-columns='NAMESPACE:.metadata.namespace,NAME:.metadata.n
 
 <br/>
 
-[result]
+**[result]**
 
 ```bash
 NAMESPACE                                          NAME                                                         STATUS
@@ -173,6 +176,64 @@ openshift-etcd                                     installer-4-master02.openshif
 openshift-etcd                                     installer-6-master02.openshift.ig.local                      Succeeded
 openshift-etcd                                     installer-6-master03.openshift.ig.local                      Succeeded
 ```
+
+<br/>
+
+## **3. Pod IP 주소(IP Address) 출력하기**
+
+---
+
+전체 Pod들에 대한 IP 주소와 속한 Node 이름을 출력할 수 있다.
+
+<br/>
+
+**[example]**
+
+```bash
+oc get pods -A -o custom-columns="NAME:.metadata.name,IP:.status.podIP,NODE:.spec.nodeName"
+```
+
+
+
+<br/>
+
+**[result]**
+
+```bash
+NAME                                                         IP             NODE
+openshift-apiserver-operator-586bcc7998-2dc7b                10.12.0.X     master03.openshift.ig.local
+apiserver-544c87989-4xbgq                                    10.13.0.XXX   master02.openshift.ig.local
+apiserver-544c87989-jstgb                                    10.12.0.XX    master03.openshift.ig.local
+apiserver-544c87989-ks5m7                                    10.12.0.XX    master01.openshift.ig.local
+authentication-operator-5c8cbdd485-rshq7                     10.12.0.X     master03.openshift.ig.local
+```
+
+<br/>
+
+## **4. Pod의 Container Image 및 Number of retries 출력하기**
+
+---
+
+전체 Pod들에 대한 컨테이너 이미지명과 재시도 횟수를 출력할 수 있다.
+
+<br/>
+
+**[example]**
+
+```bash
+oc get pods -A -o custom-columns="NAME:.metadata.name,IMAGE:.spec.containers[*].image,RESTARTS:.status.containerStatuses[*].restartCount"
+```
+
+<br/>
+
+**[result]**
+
+```bash
+NAME                                                         IMAGE                                                               installer-6-master03.openshift.ig.local                      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:XXXXX
+installer-8-master02.openshift.ig.local                      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:XXXXX
+```
+
+
 
 
 
