@@ -8,7 +8,7 @@ typora-root-url: ./
 
 
 
-# **Openshift Pod 정보 커스텀 출력하기**
+# **OpenShift Pod 정보 출력 Customizing 하기**
 
 ---
 
@@ -183,7 +183,7 @@ openshift-etcd                                     installer-6-master03.openshif
 
 ---
 
-전체 Pod들에 대한 IP 주소와 속한 Node 이름을 출력할 수 있다.
+전체 Pod들에 대한 **IP 주소**와 속한 **Node 이름**을 출력할 수 있다.
 
 <br/>
 
@@ -214,7 +214,7 @@ authentication-operator-5c8cbdd485-rshq7                     10.12.0.X     maste
 
 ---
 
-전체 Pod들에 대한 컨테이너 이미지명과 재시도 횟수를 출력할 수 있다.
+전체 Pod들에 대한 **컨테이너 이미지명**과 **재시도 횟수**를 출력할 수 있다.
 
 <br/>
 
@@ -229,7 +229,8 @@ oc get pods -A -o custom-columns="NAME:.metadata.name,IMAGE:.spec.containers[*].
 **[result]**
 
 ```bash
-NAME                                                         IMAGE                                                               installer-6-master03.openshift.ig.local                      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:XXXXX
+NAME                                                         IMAGE
+installer-6-master03.openshift.ig.local                      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:XXXXX
 installer-8-master02.openshift.ig.local                      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:XXXXX
 ```
 
