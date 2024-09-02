@@ -1,6 +1,6 @@
 ---
 title: "[OpenShift 오픈시프트] oc pod 생성 시간, 상태, IP 주소 및 컨테이너 이미지 출력 방법 (custom-columns, jsonpath 사용)"
-date: 2024-08-22 10:30:00 +0900
+date: 2024-08-23 10:00:00 +0900
 categories: [Cloud,OpenShift]
 tags: [Cloud, OpenShift, RedHat]
 typora-root-url: ./
@@ -229,9 +229,16 @@ oc get pods -A -o custom-columns="NAME:.metadata.name,IMAGE:.spec.containers[*].
 **[result]**
 
 ```bash
-NAME                                                         IMAGE
-installer-6-master03.openshift.ig.local                      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:XXXXX
-installer-8-master02.openshift.ig.local                      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:XXXXX
+NAME IMAGE RESTARTS
+openshift-apiserver-operator-586bcc7998-2dc7b quay.io/openshift-release-dev/ocp-v4.0-art-dev 1
+apiserver-544c87989-4xbgq quay.io/openshift-release-dev/ocp-v4.0-art-dev 0,0
+apiserver-544c87989-jstgb quay.io/openshift-release-dev/ocp-v4.0-art-dev 0,0
+apiserver-544c87989-ks5m7 quay.io/openshift-release-dev/ocp-v4.0-art-dev 0,0
+authentication-operator-5c8cbdd485-rshq7 quay.io/openshift-release-dev/ocp-v4.0-art-dev 1
+oauth-openshift-7f87464f54-dmlbc quay.io/openshift-release-dev/ocp-v4.0-art-dev 0
+oauth-openshift-7f87464f54-q9jmq quay.io/openshift-release-dev/ocp-v4.0-art-dev 0
+oauth-openshift-7f87464f54-vl2t7 quay.io/openshift-release-dev/ocp-v4.0-art-dev 0
+cluster-cloud-controller-manager-operator-7f49dd9989-gppvx quay.io/openshift-release-dev/ocp-v4.0-art-dev 1,2
 ```
 
 
