@@ -1,5 +1,5 @@
 ---
-title: "[OpenShift 오픈시프트] Web Console에서 프로젝트 생성 시, Pipeline 서비스 계정(Service Account) 생성 안 되는 현상(feat.Openshift Pipelines Operator)"
+title: "[OpenShift 오픈시프트] Web Console에서 프로젝트 생성 시, Pipeline 서비스 계정(SA) 생성 안 되는 현상 (feat.Openshift Pipelines Operator)"
 date: 2024-08-25 10:00:00 +0900
 categories: [Cloud,OpenShift]
 tags: [Cloud, OpenShift, RedHat]
@@ -28,11 +28,11 @@ typora-root-url: ./
 
 <br/>
 
-## **Symtomps**
+## **[Symtomps]**
 
 ---
 
-**Openshift Pipelines Operator**를 설치한 상태에서, OCP 웹 콘솔에서 **`Project`**를 생성하면 원래 자동으로 **`pipeline`**이라는 이름의 **SA(서비스 계정)**이 생성된다.
+**Openshift Pipelines Operator**를 설치한 상태에서, OCP 웹 콘솔에서 **`Project`**를 생성하면 원래 자동으로 **`pipeline`**이라는 이름의 **Service Account(서비스 계정)**이 생성된다.
 
 그런데 프로젝트를 만들어도 서비스 계정도 생성되지 않고, Trigger 메뉴에서 이벤트 리스너를 생성하고 pod가 올라오는 도중에 CrachLoopBackOff 에러가 나는 상황이 발생했다.
 
@@ -90,7 +90,7 @@ openshift-pipelines.tekton.dev/namespace-reconcile-version: <version>
 
 <br/>
 
-## **Cause**
+## **[Cause]**
 
 ---
 
@@ -106,7 +106,7 @@ openshift-pipelines.tekton.dev/namespace-reconcile-version: <version>
 
 
 
-## **Solutions**
+## **[Solutions]**
 
 ---
 
