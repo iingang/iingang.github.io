@@ -46,9 +46,9 @@ typora-root-url: ./
 
 ---
 
+`/opt/openshift/logo/custom-logo.png` 파일을 그 로고 데이터로 포함하여 **custom-logo**라는 이름의 ConfigMap을 생성한다.
 
-
-openshift-install 명령어 자동완성 기능을 활성화하기 위해 다음 명령어를 실행한다.
+<br/>
 
 **`oc create configmap custom-logo --from-file /opt/openshift/logo/custom-logo.png -n openshift-config`**
 
@@ -62,9 +62,11 @@ configmap/custom-logo created
 
 ---
 
-여기서 편집 명령어를 통해 spec 하위의 customization 부분을 추가하고 저장한다.
+클러스터의 콘솔 설정을 편집하기 위해, spec 하위의 customization 단락의 내용을 추가하고 저장한다.
 
 **`customProductName`**은 브라우저 탭에 나오는 텍스트인데, 한글도 잘 나온다. (참고로 이미지 파일이 깨지면 이미지 대신 입력한 글자로 나옴) 
+
+<br/>
 
 **`oc edit consoles.operator.openshift.io cluster`**
 
