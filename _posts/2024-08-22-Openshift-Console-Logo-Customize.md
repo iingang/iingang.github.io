@@ -1,5 +1,5 @@
 ---
-title: "[OpenShift 오픈시프트] Openshift Web Console Logo 커스터마이징 방법"
+title: "[OpenShift 오픈시프트] Openshift Web Console Logo Customizing"
 date: 2024-08-22 10:30:00 +0900
 categories: [Cloud,OpenShift]
 tags: [Cloud, OpenShift, RedHat]
@@ -8,7 +8,7 @@ typora-root-url: ./
 
 
 
-# **OCP 웹 콘솔 로고 변경하기**
+# **OCP 웹 콘솔 로고 변경 방법**
 
 ---
 
