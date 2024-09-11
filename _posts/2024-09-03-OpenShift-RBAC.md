@@ -1,6 +1,6 @@
 ---
 title: "[OpenShift 오픈시프트] Openshift RBAC(Role-based access control) / 권한 설정"
-date: 2024-09-02 10:00:00 +0900
+date: 2024-09-03 10:00:00 +0900
 categories: [Cloud,OpenShift]
 tags: [Cloud, OpenShift, RedHat]
 typora-root-url: ./
