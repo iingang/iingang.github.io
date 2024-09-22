@@ -1,5 +1,5 @@
 ---
-title: "[OpenShift 오픈시프트] Openshift RBAC(Role-based access control) / 권한 설정"
+title: "[OpenShift 오픈시프트] Openshift RBAC(Role-based access control)"
 date: 2024-09-03 10:00:00 +0900
 categories: [Cloud,OpenShift]
 tags: [Cloud, OpenShift, RedHat]
@@ -76,13 +76,7 @@ OpenShift에서 **`ClusterRole`**, **`Role`**, **`ClusterRoleBinding`**, **`Role
 
 <br/>
 
-## **User 및 Group 생성 (권한 부여)**
 
----
-
--- 이 부분은 추가로 작성 예정 --
-
-<br/>
 
 ## **References**
 
